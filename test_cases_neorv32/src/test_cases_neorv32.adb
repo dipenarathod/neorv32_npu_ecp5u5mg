@@ -1,12 +1,13 @@
-with Ada_Ml_Library;      use Ada_Ml_Library;
+with Ada_Ml;      use Ada_Ml;
+with Ada_Ml.Debug;use Ada_Ml.Debug;
+with Ada_Ml.Utils; use Ada_Ml.Utils;
+with Ada_Ml.Activation; use Ada_Ml.Activation;
+with Ada_Ml.Pooling; use Ada_Ml.Pooling;
+with Ada_Ml.Dense; use Ada_Ml.Dense;
 with Interfaces;          use Interfaces;
 with Ada.Text_IO;         use Ada.Text_IO;
 with Uart0;
 with Runtime_Support;
-with Ada_Ml_Library;      use Ada_Ml_Library;
-with Interfaces;          use Interfaces;
-with Ada.Text_IO;         use Ada.Text_IO;
-with Uart0;
 with neorv32;             use neorv32;
 with RISCV.CSR;           use RISCV.CSR;
 with riscv.CSR_Generic;   use riscv.CSR_Generic;
