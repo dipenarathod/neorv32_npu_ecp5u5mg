@@ -1,5 +1,0 @@
-runtime_support.adb:1:04: (style) space required [-gnatyt]
-runtime_support.adb:2:04: (style) space required [-gnatyt]
-runtime_support.adb:11:21: (style) trailing spaces not permitted [-gnatyb]
-runtime_support.ads:1:06: warning: no entities of "Interrupts" are referenced [-gnatwu]
-runtime_support.ads:1:18: warning: use clause for package "Interrupts" has no effect [-gnatwu]
