@@ -1,7 +1,0 @@
-dependency:bare_runtime=14.0.0=282b01b920f0d5bb2bac604ac6d9e811f26d175144bc99af963e0381e797ee94
-dependency:neorv32_hal=0.1.0-dev=d36e1db83406462dbc11cde4b1e27b79c2272ed906d51adb47d890d471eaff39
-external:ADA_ML_LIBRARY_LIBRARY_TYPE=default
-external:LIBRARY_TYPE=default
-profile:ada_ml_library=RELEASE
-switches:ada_ml_library=-O3,-fdata-sections,-ffunction-sections,-gnatW8,-gnatn
-version:gnat_riscv64_elf=14.2.1
