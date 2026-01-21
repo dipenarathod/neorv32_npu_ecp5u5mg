@@ -6,7 +6,7 @@ project Ada_Ml_Library is
    for Target use "riscv64-elf";
    for Runtime ("Ada") use Bare_Runtime'Runtime ("Ada");
 
-   for Library_Name use "Ada_Ml_Library";
+   for Library_Name use "Ada_Ml";
    for Library_Version use Project'Library_Name & ".so." & Ada_Ml_Library_Config.Crate_Version;
 
    for Source_Dirs use ("src/", "config/");

@@ -1,19 +1,35 @@
 with Interfaces;
 with System;
 
-package Ada_Ml_Library is
+package Ada_Ml is
 
    --Rename types for easier use
    --Search https://www.google.com/search?q=how+to+give+a+type+another+name+in+ada&oq=how+to+give+a+type+another+name+in+&gs_lcrp=EgZjaHJvbWUqBwgBECEYoAEyBggAEEUYOTIHCAEQIRigATIHCAIQIRifBTIHCAMQIRifBdIBCDc4NDNqMGo3qAIAsAIA&client=ubuntu-chr&sourceid=chrome&ie=UTF-8
 
-   type Unsigned_Byte is new Interfaces.Unsigned_8;
-   --type Signed_Byte is new Interfaces.Integer_8;
-   type Word is new Interfaces.Unsigned_32;
+   subtype Unsigned_Byte is Interfaces.Unsigned_8;
+   subtype U8_T is Interfaces.Unsigned_8;
+
+
+
+   subtype Word is Interfaces.Unsigned_32;
+
+
+
+   subtype U32_T is Interfaces.Unsigned_32;
+
+
+
 
    --Make types which are actually arrays(https://learn.adacore.com/courses/intro-to-ada/chapters/arrays.html)
    type Unsigned_Byte_Array is array (Natural range <>) of Unsigned_Byte;
    --type Signed_Byte_Array is array (Natural range <>) of Signed_Byte;
+
+
    type Word_Array is array (Natural range <>) of Word;
+   type U32_Array_T is array (Natural range <>) of U32_T;
+
+
+
    type Integer_Array is array (Natural range <>) of Integer;
    --Address is a type in Ada
    --Register addresses
@@ -88,11 +104,9 @@ package Ada_Ml_Library is
    procedure Write_Reg (Addr : System.Address; Value : Word);
    function Read_Reg (Addr : System.Address) return Word;
 
-   --Byte packing/unpacking
-   function Pack_Four_Bytes (B0, B1, B2, B3 : Unsigned_Byte) return Word;
    function Unpack_Byte_At_Index
      (W : Word; Index : Natural) return Unsigned_Byte; --Index 0..3
-   procedure Unpack_Four_Bytes (W : Word; B0, B1, B2, B3 : out Unsigned_Byte);
+
    function Get_Byte_From_Tensor
      (Data : Word_Array; Index : Natural) return Unsigned_Byte;
    --Word count for a square N×N int8 tensor when 4 int8 are packed per 32-bit word
@@ -164,8 +178,6 @@ package Ada_Ml_Library is
      (N : Natural; One_Dimensional : Boolean := False);
    procedure Apply_Sigmoid_All_Words
      (N : Natural; One_Dimensional : Boolean := False);
-   procedure Apply_Softmax_All_Words
-     (N : Natural; One_Dimensional : Boolean := False);
 
    --2x2 pooling across the entire N×N tensor (stride 2, no padding)
    --Produces an (N/2)×(N/2) result into R
@@ -183,7 +195,6 @@ package Ada_Ml_Library is
       Quantized_Multiplier             : Integer;
       Quantized_Multiplier_Right_Shift : Natural);
 
-   procedure Print_Registers;
 
    --Q0.7 Fixed Point Conversions
    --Q0.7: 1 sign bit + 7 fractional bits
@@ -193,17 +204,4 @@ package Ada_Ml_Library is
    function Int_To_Q07 (Value : Integer) return Unsigned_Byte;
    function Q07_To_Int (Value : Unsigned_Byte) return Integer;
 
-   --Print a 2D tensor
-   procedure Print_Tensor_Q07
-     (Name : String; Data : Word_Array; Dimension : Natural);
-
-   --Print a 1D tensor (vector)
-   procedure Print_Vector_Q07
-     (Name : String; Data : Word_Array; Vector_Length : Natural);
-
-   --Create a Word_Array from an Integer_Array
-   --Loops over an integer array to pack elements in an word array for writing to tensors
-   procedure Create_Word_Array_From_Integer_Array
-     (Integer_Source : in Integer_Array; Result_Word_Array: out Word_Array);
-
-end Ada_Ml_Library;
+end Ada_Ml;
