@@ -49,7 +49,7 @@ model.compile(
 model.fit(
     train_vec, train_labels,
     batch_size=256,
-    epochs=15,
+    epochs=20,
     validation_split=0.1,
     verbose=2
 )
@@ -75,8 +75,8 @@ def write_ada_int_array(f, name, flat):
     f.write(f"  {name} : constant Integer_Array (Natural range 0 .. {len(flat)-1}) := (\n")
     for i, w in enumerate(flat):
         sep = "," if i != len(flat) - 1 else ""
-        f.write(f"    {int(w)}{sep}\n")
-    f.write("  );\n\n")
+        f.write(f"  {int(w)}{sep}\n")
+    f.write("  );\n")
 
 
 
@@ -97,14 +97,13 @@ for index in random_numbers:
   
 
 with open(ada_ads_path, "w") as f:
-    f.write("with Ada_Ml_Library; use Ada_Ml_Library;\n\n")
-    f.write(f"package {ada_package_name} is\n\n")
-    f.write(f"Sample_Count : constant Natural := {sample_count};\n")
-    f.write("subtype Sample_Vector is Integer_Array (Natural range 0 .. 195);\n")
-    f.write("type Sample_Set is array (Natural range 0 .. Sample_Count - 1) of Sample_Vector;\n\n")
+    f.write("with Ada_Ml_Library; use Ada_Ml_Library;\n")
+    f.write(f"package {ada_package_name} is\n")
+    f.write(f"  Sample_Count : constant Natural := {sample_count};\n")
+    f.write(f"  type Sample_Set is array (Natural range 0 .. Sample_Count - 1) of Integer_Array (Natural range 0 .. 195);\n")
 
     #Write Samples as a proper 2D Ada constant
-    f.write("Samples : constant Sample_Set := (\n")
+    f.write("   Samples : constant Sample_Set := (\n")
     for s in range(sample_count):
         f.write(f"  {s} => (\n")
         flat = random_images[s].astype(np.int8).flatten()  # ensure Python int printing is sane
@@ -123,9 +122,9 @@ with open(ada_ads_path, "w") as f:
             closer = closer + ","
         closer = closer + "\n"
         f.write(closer)
-    f.write(");\n\n")
+    f.write(");\n")
 
-    write_ada_int_array(f,"Labels", random_labels)
+    write_ada_int_array(f,"    Labels", random_labels)
 
     f.write(f"end {ada_package_name};\n")
 
