@@ -83,34 +83,34 @@ def write_array(f, name, arr):
 
 
 #Convert int to strict 8-bits for left shifting it. The 8-bits will be stored in the 32-bit word
-def int8_to_u8(v: int):
+def int_to_byte(v: int):
     return int(v) & 0xFF
 
 
 #Pack 4 8-bit values in a 32-bit word
-def pack4_u8_to_u32(b0, b1, b2, b3):
+def pack_four_bytes(b0, b1, b2, b3):
     return (b0 & 0xFF) | ((b1 & 0xFF) << 8) | ((b2 & 0xFF) << 16) | ((b3 & 0xFF) << 24)
 
 #Pack an int8 array into a 32-bit words array
-def pack_int8_array_to_words(arr_int8):
+def pack_int_array_to_words(arr_int8):
     flat = arr_int8.flatten()
     words = []
     for i in range(0, len(flat), 4):
-        b0 = int8_to_u8(flat[i])
+        b0 = int_to_byte(flat[i])
         b1 = 0
         b2 = 0
         b3 = 0
         if(i + 1 < len(flat)):
-            b1 = int8_to_u8(flat[i + 1])
+            b1 = int_to_byte(flat[i + 1])
         if(i + 2 < len(flat)):
-            b2 = int8_to_u8(flat[i + 2])
+            b2 = int_to_byte(flat[i + 2])
         if(i + 3 < len(flat)):
-            b3 = int8_to_u8(flat[i + 3])
-        words.append(pack4_u8_to_u32(b0, b1, b2, b3))
+            b3 = int_to_byte(flat[i + 3])
+        words.append(pack_four_bytes(b0, b1, b2, b3))
     return words
 
 #Stric 32-bit representation
-def int32_to_u32(v):
+def int_to_word(v):
     return int(v) & 0xFFFFFFFF
 
 #Helper to write integer in Ada
@@ -129,12 +129,11 @@ def write_ada_word_array(f, name, words):
     f.write(");\n\n")
 
 def main():
-    output_path.mkdir(parents=True, exist_ok=True)
+    output_path.mkdir(parents = True, exist_ok = True)
     model=tf.keras.models.load_model(model_path)
     ada_file = open(ada_ads_path, "w")
     ada_file.write("with Ada_Ml_Library; use Ada_Ml_Library;\n\n")
     ada_file.write(f"package {ada_package_name} is\n\n")
-    ada_entries = []
     for layer_index, layer in enumerate(model.layers):
         weights=layer.get_weights()
         if(not weights):
@@ -180,8 +179,8 @@ def main():
                 write_array(f, f"{base_name}_weights_int8", w_q.astype(np.int8))
                 write_array(f, f"{base_name}_bias_int32", b_q32.astype(np.int32))
 
-                w_words = pack_int8_array_to_words(w_q.astype(np.int8))
-                b_words = [int32_to_u32(v) for v in b_q32.flatten()]
+                w_words = pack_int_array_to_words(w_q.astype(np.int8))
+                b_words = [int_to_word(v) for v in b_q32.flatten()]
                 
                 prefix = base_name
                 write_ada_int(ada_file, f"{prefix}_WZP", int(w_zp))
@@ -194,8 +193,8 @@ def main():
             else:
                 #Single-weights case for convolution. TODO. Wrote something incase
                 for p_index, p_float in enumerate(weights):
-                    p_scale, p_zp=get_scale_and_zero_point(np.min(p_float), np.max(p_float))
-                    p_q=quantize_int8(p_float, p_scale, p_zp)
+                    p_scale, p_zp = get_scale_and_zero_point(np.min(p_float), np.max(p_float))
+                    p_q = quantize_int8(p_float, p_scale, p_zp)
                     f.write(f"{base_name}_p{p_index}\n")
                     f.write(f"scale={p_scale}\n")
                     f.write(f"ZERO_POINT={p_zp}\n\n")
@@ -204,5 +203,5 @@ def main():
     ada_file.close()
 
 
-if(__name__=="__main__"):
+if(__name__ == "__main__"):
     main()
