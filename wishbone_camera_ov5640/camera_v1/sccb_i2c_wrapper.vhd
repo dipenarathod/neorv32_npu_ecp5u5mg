@@ -60,8 +60,32 @@ Architecture rtl Of sccb_i2c_wrapper Is
 	Type ov5640_reg_addr_arr Is Array (Natural Range <>) Of Std_logic_vector(15 Downto 0); --OV5640 address array type
 	Type ov5640_reg_data_arr Is Array (Natural Range <>) Of Std_logic_vector(7 Downto 0); --OV5640 data arrays
 
-	Signal ov5640_reg_addr : ov5640_reg_addr_arr (0 To 4) := (x"4300", x"3808", x"3009", x"380A", x"380B"); --register address array
-	Signal ov5640_reg_data : ov5640_reg_data_arr (0 To 4) := (x"30", x"00", x"32", x"00", x"32"); --register values. Refer datasheet for each address to understand values
+	Signal ov5640_reg_addr : ov5640_reg_addr_arr (0 To 21) := (
+		x"5001", x"4300",
+		x"3800", x"3801",
+		x"3802", x"3803",
+		x"3804", x"3805",
+		x"3806", x"3807",
+		x"3808", x"3809",
+		x"380A", x"380B",
+		x"380C", x"380D",
+		x"380E", x"380F",
+		x"3810", x"3811",
+		x"3812", x"3813"); --register address array
+
+	Signal ov5640_reg_data : ov5640_reg_data_arr (0 To 21) := (
+		x"20", x"10", 	--Set output to Y8, enabled scaling, wrote all regsiters from 3800-380F, and introduced offset registers
+		x"00", x"00",
+		x"00", x"00",
+		x"0A", x"3F",
+		x"07", x"9F",
+		x"00", x"32",
+		x"00", x"32",
+		x"0B", x"1C",	--These 2 and the 2 below are timing values to control FPS from what I understand. Need to experiment with them. I am using default values for now
+		x"07", x"B0",
+		x"00", x"10",	--These 2 and the two below are offset register values. Need to experiment with them. I am using default values for now
+		x"00", x"06"); 
+		--register values. Refer datasheet for each address to understand values
 
 	Signal table_length : Natural := ov5640_reg_addr'Length; --ROM table Length
 
