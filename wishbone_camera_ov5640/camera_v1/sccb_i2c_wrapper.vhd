@@ -74,7 +74,7 @@ Architecture rtl Of sccb_i2c_wrapper Is
 		x"3812", x"3813"); --register address array
 
 	Signal ov5640_reg_data : ov5640_reg_data_arr (0 To 21) := (
-		x"20", x"10", 	--Set output to Y8, enabled scaling, wrote all regsiters from 3800-380F, and introduced offset registers
+		x"20", x"30", 	--Set output to YUV422 (YUYV), enabled scaling, wrote all regsiters from 3800-380F, and introduced offset registers
 		x"00", x"00",
 		x"00", x"00",
 		x"0A", x"3F",
@@ -258,3 +258,4 @@ Begin
 	End Process;
 
 End;
+
