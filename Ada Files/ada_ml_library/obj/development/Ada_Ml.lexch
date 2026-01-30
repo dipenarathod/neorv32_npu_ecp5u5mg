@@ -1,0 +1,15 @@
+[LIBRARY PATH]
+/home/dipen/Downloads/neorv32-halv2/ada_ml_library/lib/libAda_Ml.a
+[OBJECT FILES]
+/home/dipen/Downloads/neorv32-halv2/ada_ml_library/obj/development/ada_ml-activation.o
+20260130122911
+/home/dipen/Downloads/neorv32-halv2/ada_ml_library/obj/development/ada_ml-debug.o
+20260130122715
+/home/dipen/Downloads/neorv32-halv2/ada_ml_library/obj/development/ada_ml-dense.o
+20260130122621
+/home/dipen/Downloads/neorv32-halv2/ada_ml_library/obj/development/ada_ml-pooling.o
+20260130122621
+/home/dipen/Downloads/neorv32-halv2/ada_ml_library/obj/development/ada_ml.o
+20260130122621
+/home/dipen/Downloads/neorv32-halv2/ada_ml_library/obj/development/ada_ml_library_config.o
+20260130122621

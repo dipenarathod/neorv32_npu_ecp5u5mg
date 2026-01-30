@@ -1,0 +1,104 @@
+V "GNAT Lib v14"
+A -Og
+A -gnatA
+A --RTS=/home/dipen/.local/share/alire/builds/bare_runtime_14.0.0_095db6f0/282b01b920f0d5bb2bac604ac6d9e811f26d175144bc99af963e0381e797ee94/
+A -mabi=ilp32
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -gnatwa
+A -gnatw.X
+A -gnatVa
+A -gnaty3
+A -gnatya
+A -gnatyA
+A -gnatyB
+A -gnatyb
+A -gnatyc
+A -gnaty-
+A -gnatyd
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatym
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnatW8
+A -gnat2022
+A -misa-spec=20191213
+A -march=rv32i_zicsr_zifencei
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada_ml.pooling%b	ada_ml-pooling.adb	6d3be5cc NE OO PK
+W ada_ml%s		ada_ml.adb		ada_ml.ali
+
+U ada_ml.pooling%s	ada_ml-pooling.ads	00f23cc3 EE NE OO PK
+W ada_ml%s		ada_ml.adb		ada_ml.ali
+
+D ada_ml.ads		20260130122538 e325d27a ada_ml%s
+D ada_ml-pooling.ads	20260121170341 e3d7eeb9 ada_ml.pooling%s
+D ada_ml-pooling.adb	20260121170336 8eec0b75 ada_ml.pooling%b
+D input_output_helper.ads  20260130122142 bfcd7d93 input_output_helper%s
+D interfac.ads		20250921045803 9111f9c1 interfaces%s
+D system.ads		20250921045803 28e4acdd system%s
+D s-atacco.ads		20250921045803 5868e3ba system.address_to_access_conversions%s
+D s-stoele.ads		20250921045803 ccded4e8 system.storage_elements%s
+G a e
+G c Z s b [apply_maxpool_2x2_all_words ada_ml__pooling 5 14 none]
+G c Z s b [apply_avgpool_2x2_all_words ada_ml__pooling 6 14 none]
+G r c none [apply_maxpool_2x2_all_words ada_ml__pooling 5 14 none] [set_dim ada_ml 78 13 none]
+G r c none [apply_maxpool_2x2_all_words ada_ml__pooling 5 14 none] [set_pool_base_index ada_ml 79 13 none]
+G r c none [apply_maxpool_2x2_all_words ada_ml__pooling 5 14 none] [set_out_index ada_ml 80 13 none]
+G r c none [apply_maxpool_2x2_all_words ada_ml__pooling 5 14 none] [perform_max_pool ada_ml 104 13 none]
+G r c none [apply_maxpool_2x2_all_words ada_ml__pooling 5 14 none] [wait_while_busy ada_ml 113 13 none]
+G r c none [apply_maxpool_2x2_all_words ada_ml__pooling 5 14 none] [write_reg input_output_helper 45 14 none]
+G r c none [apply_avgpool_2x2_all_words ada_ml__pooling 6 14 none] [set_dim ada_ml 78 13 none]
+G r c none [apply_avgpool_2x2_all_words ada_ml__pooling 6 14 none] [set_pool_base_index ada_ml 79 13 none]
+G r c none [apply_avgpool_2x2_all_words ada_ml__pooling 6 14 none] [set_out_index ada_ml 80 13 none]
+G r c none [apply_avgpool_2x2_all_words ada_ml__pooling 6 14 none] [perform_avg_pool ada_ml 105 13 none]
+G r c none [apply_avgpool_2x2_all_words ada_ml__pooling 6 14 none] [wait_while_busy ada_ml 113 13 none]
+G r c none [apply_avgpool_2x2_all_words ada_ml__pooling 6 14 none] [write_reg input_output_helper 45 14 none]
+X 1 ada_ml.ads
+4K9*Ada_Ml 139e11 2|1r9 8r5 3|1r14 51r5
+9m3*CTRL_Addr{6|85M9} 3|22r24 46r24
+78U13*Set_Dim 3|10s7 34s7
+79U13*Set_Pool_Base_Index 3|18s13 42s13
+80U13*Set_Out_Index 3|19s13 43s13
+104U13*Perform_Max_Pool 3|20s13
+105U13*Perform_Avg_Pool 3|44s13
+113U13*Wait_While_Busy 3|21s13 45s13
+X 2 ada_ml-pooling.ads
+1K16*pooling 1|4k9 2|8l12 8e19 3|1b21 51l12 51t19
+5U14*Apply_MaxPool_2x2_All_Words 5>43 3|5b14 25l8 25t35
+5i43 N{natural} 3|5b43 6r39 10r16 13r31
+6U14*Apply_AvgPool_2x2_All_words 6>43 3|29b14 49l8 49t35
+6i43 N{natural} 3|29b43 30r39 34r16 37r31
+X 3 ada_ml-pooling.adb
+6i7 Out_N{natural} 11r21 12r24 16r30
+7i7 Base{natural} 13m13 18r34
+8i7 Out_Index{natural} 16m13 19r28
+11i11 r{integer} 13r26 16r26
+12i14 c{integer} 13r40 16r38
+30i7 Out_N{natural} 35r21 36r24 40r30
+31i7 Base{natural} 37m13 42r34
+32i7 Out_Index{natural} 40m13 43r28
+35i11 r{integer} 37r26 40r26
+36i14 c{integer} 37r40 40r38
+X 4 input_output_helper.ads
+45U14*Write_Reg 3|22s13 46s13
+X 6 system.ads
+85M9*Address
+

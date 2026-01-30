@@ -1,0 +1,108 @@
+V "GNAT Lib v14"
+A -Og
+A -gnatA
+A --RTS=/home/dipen/.local/share/alire/builds/bare_runtime_14.0.0_095db6f0/282b01b920f0d5bb2bac604ac6d9e811f26d175144bc99af963e0381e797ee94/
+A -mabi=ilp32
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -gnatwa
+A -gnatw.X
+A -gnatVa
+A -gnaty3
+A -gnatya
+A -gnatyA
+A -gnatyB
+A -gnatyb
+A -gnatyc
+A -gnaty-
+A -gnatyd
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatym
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnatW8
+A -gnat2022
+A -misa-spec=20191213
+A -march=rv32i_zicsr_zifencei
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada_ml.dense%b	ada_ml-dense.adb	7b97dc0e NE OO PK
+W ada_ml%s		ada_ml.adb		ada_ml.ali
+
+U ada_ml.dense%s	ada_ml-dense.ads	a2eab18f EE NE OO PK
+W ada_ml%s		ada_ml.adb		ada_ml.ali
+
+D ada_ml.ads		20260130122538 e325d27a ada_ml%s
+D ada_ml-dense.ads	20260121170353 41cf63f5 ada_ml.dense%s
+D ada_ml-dense.adb	20260121170346 3a58bffb ada_ml.dense%b
+D input_output_helper.ads  20260130122142 bfcd7d93 input_output_helper%s
+D interfac.ads		20250921045803 9111f9c1 interfaces%s
+D system.ads		20250921045803 28e4acdd system%s
+D s-atacco.ads		20250921045803 5868e3ba system.address_to_access_conversions%s
+D s-stoele.ads		20250921045803 ccded4e8 system.storage_elements%s
+G a e
+G c Z s b [apply_dense_all_words ada_ml__dense 4 14 none]
+G r c none [apply_dense_all_words ada_ml__dense 4 14 none] [set_n_inputs ada_ml 91 13 none]
+G r c none [apply_dense_all_words ada_ml__dense 4 14 none] [set_scale_register ada_ml 93 13 none]
+G r c none [apply_dense_all_words ada_ml__dense 4 14 none] [set_zero_point ada_ml 95 13 none]
+G r c none [apply_dense_all_words ada_ml__dense 4 14 none] [set_quantized_multiplier_register ada_ml 97 13 none]
+G r c none [apply_dense_all_words ada_ml__dense 4 14 none] [set_quantized_multiplier_right_shift_register ada_ml 99 13 none]
+G r c none [apply_dense_all_words ada_ml__dense 4 14 none] [set_word_index ada_ml 81 13 none]
+G r c none [apply_dense_all_words ada_ml__dense 4 14 none] [set_weight_base_index ada_ml 85 13 none]
+G r c none [apply_dense_all_words ada_ml__dense 4 14 none] [set_bias_base_index ada_ml 88 13 none]
+G r c none [apply_dense_all_words ada_ml__dense 4 14 none] [set_out_index ada_ml 80 13 none]
+G r c none [apply_dense_all_words ada_ml__dense 4 14 none] [perform_dense ada_ml 109 13 none]
+G r c none [apply_dense_all_words ada_ml__dense 4 14 none] [wait_while_busy ada_ml 113 13 none]
+G r c none [apply_dense_all_words ada_ml__dense 4 14 none] [write_reg input_output_helper 45 14 none]
+X 1 ada_ml.ads
+4K9*Ada_Ml 139e11 2|1r9 14r5 3|1r14 50r5
+9m3*CTRL_Addr{6|85M9} 3|46r13
+80U13*Set_Out_Index 3|39s10
+81U13*Set_Word_Index 3|36s10
+85U13*Set_Weight_Base_Index 3|37s10
+88U13*Set_Bias_Base_Index 3|38s10
+91U13*Set_N_Inputs 3|20s7
+93U13*Set_Scale_Register 3|21s7
+95U13*Set_Zero_Point 3|22s7
+97U13*Set_Quantized_Multiplier_Register 3|23s7
+99U13*Set_Quantized_Multiplier_Right_Shift_Register 3|24s7
+109U13*Perform_Dense 3|41s10
+113U13*Wait_While_Busy 3|43s10
+X 2 ada_ml-dense.ads
+1K16*Dense 1|4k9 2|14l12 14e17 3|1b21 50l12 50t17
+4U14*Apply_Dense_All_Words 5>7 6>7 7>7 8>7 9>7 10>7 11>7 12>7 3|5b14 48l8
+. 48t29
+5i7 Inputs{natural} 3|6b7 20r21 33r19
+6i7 Neurons{natural} 3|7b7 28r21
+7i7 Weight_Base_Index{natural} 3|8b7 32r12
+8i7 Bias_Base_Index{natural} 3|9b7 34r21
+9i7 Scale{natural} 3|10b7 21r27
+10i7 Zero_Point{integer} 3|11b7 22r23
+11i7 Quantized_Multiplier{integer} 3|12b7 23r42
+12i7 Quantized_Multiplier_Right_Shift{natural} 3|13b7 25r10
+X 3 ada_ml-dense.adb
+15i7 Input_Base_Index{natural} 36r26
+17i7 W_Base{natural} 31m10 37r33
+18i7 B_Index{natural} 34m10 38r31
+28i11 N{integer} 33r15 34r40 39r25
+X 4 input_output_helper.ads
+45U14*Write_Reg 3|45s10
+X 6 system.ads
+85M9*Address
+

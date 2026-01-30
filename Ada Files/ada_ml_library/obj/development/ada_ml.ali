@@ -1,0 +1,322 @@
+V "GNAT Lib v14"
+A -Og
+A -gnatA
+A --RTS=/home/dipen/.local/share/alire/builds/bare_runtime_14.0.0_095db6f0/282b01b920f0d5bb2bac604ac6d9e811f26d175144bc99af963e0381e797ee94/
+A -mabi=ilp32
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -gnatwa
+A -gnatw.X
+A -gnatVa
+A -gnaty3
+A -gnatya
+A -gnatyA
+A -gnatyB
+A -gnatyb
+A -gnatyc
+A -gnaty-
+A -gnatyd
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatym
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnatW8
+A -gnat2022
+A -misa-spec=20191213
+A -march=rv32i_zicsr_zifencei
+P ZX
+
+RN
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada_ml%b		ada_ml.adb		c3bf205e NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.address_to_access_conversions%s
+W system.storage_elements%s  s-stoele.ads	s-stoele.ali
+
+U ada_ml%s		ada_ml.ads		e51dfaf5 EE NE OO PK
+W input_output_helper%s	input_output_helper.adb	input_output_helper.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20250921045803 76789da1 ada%s
+D a-textio.ads		20250921045803 6c013a58 ada.text_io%s
+D ada_ml.ads		20260130122538 e325d27a ada_ml%s
+D ada_ml.adb		20260130122505 493c06ef ada_ml%b
+D input_output_helper.ads  20260130122142 bfcd7d93 input_output_helper%s
+D interfac.ads		20250921045803 9111f9c1 interfaces%s
+D system.ads		20250921045803 28e4acdd system%s
+D s-atacco.ads		20250921045803 5868e3ba system.address_to_access_conversions%s
+D s-stoele.ads		20250921045803 ccded4e8 system.storage_elements%s
+G a e
+G c Z s b [set_dim ada_ml 78 13 none]
+G c Z s b [set_pool_base_index ada_ml 79 13 none]
+G c Z s b [set_out_index ada_ml 80 13 none]
+G c Z s b [set_word_index ada_ml 81 13 none]
+G c Z s b [set_softmax_mode ada_ml 82 13 none]
+G c Z s b [set_sum_param ada_ml 83 13 none]
+G c Z s b [set_weight_base_index ada_ml 85 13 none]
+G c Z s b [set_bias_base_index ada_ml 88 13 none]
+G c Z s b [set_n_inputs ada_ml 91 13 none]
+G c Z s b [set_scale_register ada_ml 93 13 none]
+G c Z s b [set_zero_point ada_ml 95 13 none]
+G c Z s b [set_quantized_multiplier_register ada_ml 97 13 none]
+G c Z s b [set_quantized_multiplier_right_shift_register ada_ml 99 13 none]
+G c Z s b [perform_op ada_ml 103 13 none]
+G c Z s b [perform_max_pool ada_ml 104 13 none]
+G c Z s b [perform_avg_pool ada_ml 105 13 none]
+G c Z s b [perform_sigmoid ada_ml 106 13 none]
+G c Z s b [perform_relu ada_ml 107 13 none]
+G c Z s b [perform_softmax ada_ml 108 13 none]
+G c Z s b [perform_dense ada_ml 109 13 none]
+G c Z s b [is_busy ada_ml 111 12 none]
+G c Z s b [is_done ada_ml 112 12 none]
+G c Z s b [wait_while_busy ada_ml 113 13 none]
+G c Z s b [write_word_in_a ada_ml 116 13 none]
+G c Z s b [write_words_in_a ada_ml 117 13 none]
+G c Z s b [read_word_from_a ada_ml 119 12 none]
+G c Z s b [read_words_from_a ada_ml 120 13 none]
+G c Z s b [write_word_in_b ada_ml 122 13 none]
+G c Z s b [write_words_in_b ada_ml 123 13 none]
+G c Z s b [read_word_from_b ada_ml 125 12 none]
+G c Z s b [read_words_from_b ada_ml 126 13 none]
+G c Z s b [write_word_in_c ada_ml 128 13 none]
+G c Z s b [write_words_in_c ada_ml 129 13 none]
+G c Z s b [read_word_from_c ada_ml 131 12 none]
+G c Z s b [read_words_from_c ada_ml 132 13 none]
+G c Z s b [read_word_from_r ada_ml 134 12 none]
+G c Z s b [read_words_from_r ada_ml 135 13 none]
+G r c none [set_dim ada_ml 78 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [set_pool_base_index ada_ml 79 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [set_out_index ada_ml 80 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [set_word_index ada_ml 81 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [set_softmax_mode ada_ml 82 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [set_sum_param ada_ml 83 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [set_weight_base_index ada_ml 85 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [set_bias_base_index ada_ml 88 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [set_n_inputs ada_ml 91 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [set_scale_register ada_ml 93 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [set_zero_point ada_ml 95 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [set_quantized_multiplier_register ada_ml 97 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [set_quantized_multiplier_right_shift_register ada_ml 99 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [perform_op ada_ml 103 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [perform_max_pool ada_ml 104 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [perform_avg_pool ada_ml 105 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [perform_sigmoid ada_ml 106 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [perform_relu ada_ml 107 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [perform_softmax ada_ml 108 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [perform_dense ada_ml 109 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [is_busy ada_ml 111 12 none] [read_reg input_output_helper 48 13 none]
+G r c none [is_done ada_ml 112 12 none] [read_reg input_output_helper 48 13 none]
+G r c none [wait_while_busy ada_ml 113 13 none] [read_reg input_output_helper 48 13 none]
+G r c none [write_word_in_a ada_ml 116 13 none] [add_byte_offset input_output_helper 41 13 none]
+G r c none [write_word_in_a ada_ml 116 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [write_words_in_a ada_ml 117 13 none] [add_byte_offset input_output_helper 41 13 none]
+G r c none [write_words_in_a ada_ml 117 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [read_word_from_a ada_ml 119 12 none] [add_byte_offset input_output_helper 41 13 none]
+G r c none [read_word_from_a ada_ml 119 12 none] [read_reg input_output_helper 48 13 none]
+G r c none [read_words_from_a ada_ml 120 13 none] [add_byte_offset input_output_helper 41 13 none]
+G r c none [read_words_from_a ada_ml 120 13 none] [read_reg input_output_helper 48 13 none]
+G r c none [write_word_in_b ada_ml 122 13 none] [add_byte_offset input_output_helper 41 13 none]
+G r c none [write_word_in_b ada_ml 122 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [write_words_in_b ada_ml 123 13 none] [add_byte_offset input_output_helper 41 13 none]
+G r c none [write_words_in_b ada_ml 123 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [read_word_from_b ada_ml 125 12 none] [add_byte_offset input_output_helper 41 13 none]
+G r c none [read_word_from_b ada_ml 125 12 none] [read_reg input_output_helper 48 13 none]
+G r c none [read_words_from_b ada_ml 126 13 none] [add_byte_offset input_output_helper 41 13 none]
+G r c none [read_words_from_b ada_ml 126 13 none] [read_reg input_output_helper 48 13 none]
+G r c none [write_word_in_c ada_ml 128 13 none] [add_byte_offset input_output_helper 41 13 none]
+G r c none [write_word_in_c ada_ml 128 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [write_words_in_c ada_ml 129 13 none] [add_byte_offset input_output_helper 41 13 none]
+G r c none [write_words_in_c ada_ml 129 13 none] [write_reg input_output_helper 45 14 none]
+G r c none [read_word_from_c ada_ml 131 12 none] [add_byte_offset input_output_helper 41 13 none]
+G r c none [read_word_from_c ada_ml 131 12 none] [read_reg input_output_helper 48 13 none]
+G r c none [read_words_from_c ada_ml 132 13 none] [add_byte_offset input_output_helper 41 13 none]
+G r c none [read_words_from_c ada_ml 132 13 none] [read_reg input_output_helper 48 13 none]
+G r c none [read_word_from_r ada_ml 134 12 none] [add_byte_offset input_output_helper 41 13 none]
+G r c none [read_word_from_r ada_ml 134 12 none] [read_reg input_output_helper 48 13 none]
+G r c none [read_words_from_r ada_ml 135 13 none] [add_byte_offset input_output_helper 41 13 none]
+G r c none [read_words_from_r ada_ml 135 13 none] [read_reg input_output_helper 48 13 none]
+X 1 ada.ads
+16K9*Ada 20e8 4|4r6 4r23
+X 2 a-textio.ads
+36K13*Text_IO 62e16 4|4w10 4r27
+X 3 ada_ml.ads
+4K9*Ada_Ml 139l5 139e11 4|6b14 277l5 277t11
+9m3*CTRL_Addr{7|85M9} 4|104r18
+12m3*STATUS_Addr{7|85M9} 4|143r25 149r25
+14m3*DIM_Addr{7|85M9} 4|12r18
+17m3*BASEI_Addr{7|85M9} 4|18r18
+19m3*OUTI_Addr{7|85M9} 4|24r18
+21m3*WORDI_Addr{7|85M9} 4|30r18
+23m3*SUM_Addr{7|85M9} 4|42r18
+25m3*SOFTMAX_MODE_Addr{7|85M9} 4|36r18
+27m3*WEIGHT_BASE_INDEX_Addr{7|85M9} 4|48r18
+29m3*BIAS_BASE_INDEX_Addr{7|85M9} 4|54r18
+31m3*N_INPUTS_Addr{7|85M9} 4|60r18
+33m3*SCALE_REG_Addr{7|85M9} 4|66r18
+35m3*ZERO_POINT_REG_Addr{7|85M9} 4|72r18
+37m3*QUANTIZED_MULTIPLIER_REG_Addr{7|85M9} 4|79r10
+39m3*QUANTIZED_MULTIPLIER_RIGHT_SHIFT_REG_Addr{7|85M9} 4|87r10
+42m3*ABASE_Addr{7|85M9} 4|166r26 182r26
+44m3*BBASE_Addr{7|85M9} 4|198r26 214r26
+46m3*CBASE_Addr{7|85M9} 4|230r26 246r26
+48m3*RBASE_Addr{7|85M9} 4|262r26
+53m3*OP_MAX{5|13M11} 4|109r19
+54m3*OP_AVG{5|13M11} 4|114r19
+55m3*OP_SIG{5|13M11} 4|119r19
+56m3*OP_RELU{5|13M11} 4|124r19
+57m3*OP_SOFTMAX{5|13M11} 4|130r19
+60m3*OP_DENSE{5|13M11} 4|136r19
+61m3*OP_NOP{5|13M11} 4|99r26
+62m3*MAX_ALLOWED_OPCODE{5|13M11} 4|98r26
+65m3*SOFTMAX_MODE_EXP{5|13M11}
+66m3*SOFTMAX_MODE_DIV{5|13M11}
+69m3*Perform_Bit{5|13M11} 4|102r57
+70i3*Opcode_Shift{natural} 4|102r40
+72m3*Busy_Mask{5|13M11} 4|143r42
+73m3*Done_Mask{5|13M11} 4|149r42
+78U13*Set_Dim 78>22 4|10b14 13l8 13t15
+78i22 N{natural} 4|10b23 12r47
+79U13*Set_Pool_Base_Index 79>34 4|16b14 19l8 19t27
+79i34 Index{natural} 4|16b35 18r49
+80U13*Set_Out_Index 80>28 4|22b14 25l8 25t21
+80i28 Index{natural} 4|22b29 24r48
+81U13*Set_Word_Index 81>29 4|28b14 31l8 31t22
+81i29 Index{natural} 4|28b30 30r49
+82U13*Set_Softmax_Mode 82>31 4|34b14 37l8 37t24
+82m31 Mode{5|13M11} 4|34b32 36r37
+83U13*Set_Sum_Param 84>5 4|40b14 43l8 43t21
+84m5 Sum{5|13M11} 4|40b29 42r28
+85U13*Set_Weight_Base_Index 86>5 4|46b14 49l8 49t29
+86i5 Index{natural} 4|46b37 48r61
+88U13*Set_Bias_Base_Index 89>5 4|52b14 55l8 55t27
+89i5 Index{natural} 4|52b35 54r59
+91U13*Set_N_Inputs 92>5 4|58b14 61l8 61t20
+92i5 N{natural} 4|58b28 60r52
+93U13*Set_Scale_Register 94>5 4|64b14 67t7
+94i5 Scale{natural} 4|64b34 66r53
+95U13*Set_Zero_Point 96>5 4|70b14 73t7
+96i5 Zero_Point{integer} 4|70b30 72r58
+97U13*Set_Quantized_Multiplier_Register 98>5 4|76b14 80t7
+98i5 Multiplier{integer} 4|76b49 79r60
+99U13*Set_Quantized_Multiplier_Right_Shift_Register 100>5 4|83b14 89t7
+100i5 Right_Shift{natural} 4|84b7 88r29
+103U13*Perform_Op 103>25 4|92b14 105l8 105t18 109s7 114s7 119s7 124s7 130s7
+. 136s7
+103m25 Opcode{5|13M11} 4|92b26 93r30
+104U13*Perform_Max_Pool 4|107b14 110l8 110t24
+105U13*Perform_Avg_Pool 4|112b14 115l8 115t24
+106U13*Perform_Sigmoid 4|117b14 120l8 120t23
+107U13*Perform_ReLU 4|122b14 125l8 125t20
+108U13*Perform_Softmax 4|128b14 131l8 131t23
+109U13*Perform_Dense 4|134b14 137l8 137t21
+111V12*Is_Busy{boolean} 4|141b13 144l8 144t15 155s13
+112V12*Is_Done{boolean} 4|147b13 150l8 150t15
+113U13*Wait_While_Busy 4|153b14 158l8 158t23
+116U13*Write_Word_In_A 116>30 116>47 4|164b14 169l8 169t23 175s10
+116i30 Index{natural} 4|164b31 166r51
+116m47 Value{5|13M11} 4|164b48 168r24
+117U13*Write_Words_In_A 117>31 4|171b14 178l8 178t24
+117a31 Src{5|20A8} 4|171b32 174r16 175r30
+119V12*Read_Word_From_A{5|13M11} 119>30 4|180b13 185l8 185t24 191s22
+119i30 Index{natural} 4|180b31 182r51
+120U13*Read_Words_From_A 120<32 4|187b14 194l8 194t25
+120a32 Dest{5|20A8} 4|187b33 190r16 191m10
+122U13*Write_Word_In_B 122>30 122>47 4|196b14 201l8 201t23 207s10
+122i30 Index{natural} 4|196b31 198r51
+122m47 Value{5|13M11} 4|196b48 200r24
+123U13*Write_Words_In_B 123>31 4|203b14 210l8 210t24
+123a31 Src{5|20A8} 4|203b32 206r16 207r30
+125V12*Read_Word_From_B{5|13M11} 125>30 4|212b13 217l8 217t24 223s22
+125i30 Index{natural} 4|212b31 214r51
+126U13*Read_Words_From_B 126<32 4|219b14 226l8 226t25
+126a32 Dest{5|20A8} 4|219b33 222r16 223m10
+128U13*Write_Word_In_C 128>30 128>47 4|228b14 233l8 233t23 239s10
+128i30 Index{natural} 4|228b31 230r51
+128m47 Value{5|13M11} 4|228b48 232r24
+129U13*Write_Words_In_C 129>31 4|235b14 242l8 242t24
+129a31 Src{5|20A8} 4|235b32 238r16 239r30
+131V12*Read_Word_From_C{5|13M11} 131>30 4|244b13 249l8 249t24 255s22
+131i30 Index{natural} 4|244b31 246r51
+132U13*Read_Words_From_C 132<32 4|251b14 258l8 258t25
+132a32 Dest{5|20A8} 4|251b33 254r16 255m10
+134V12*Read_Word_From_R{5|13M11} 134>30 4|260b13 265l8 265t24 271s22
+134i30 Index{natural} 4|260b31 262r51
+135U13*Read_Words_From_R 135<32 4|267b14 274l8 274t25
+135a32 Dest{5|20A8} 4|267b33 270r16 271m10
+X 4 ada_ml.adb
+93m7 Final_Opcode{5|13M11} 98r11 99m10 102r26
+94m7 Val{5|13M11} 102m7 104r29
+165m7 Addr{7|85M9} 168r18
+172i7 J{natural} 175r27 176m10 176r15
+174i11 I{integer} 175r35
+181m7 Addr{7|85M9} 184r24
+188i7 J{natural} 191r40 192m10 192r15
+190i11 I{integer} 191r16
+197m7 Addr{7|85M9} 200r18
+204i7 J{natural} 207r27 208m10 208r15
+206i11 I{integer} 207r35
+213m7 Addr{7|85M9} 216r24
+220i7 J{natural} 223r40 224m10 224r15
+222i11 I{integer} 223r16
+229m7 Addr{7|85M9} 232r18
+236i7 J{natural} 239r27 240m10 240r15
+238i11 I{integer} 239r35
+245m7 Addr{7|85M9} 248r24
+252i7 J{natural} 255r40 256m10 256r15
+254i11 I{integer} 255r16
+261m7 Addr{7|85M9} 264r24
+268i7 J{natural} 271r40 272m10 272r15
+270i11 I{integer} 271r16
+X 5 input_output_helper.ads
+5K9*Input_Output_Helper 3|3w6 3r31 5|74e24
+13M11*Word{6|81M9} 3|53r25 54r25 55r25 56r25 57r25 60r33 61r33 62r33 65r31
+. 66r31 69r27 72r27 73r27 82r38 84r11 103r34 116r55 119r54 122r55 125r54
+. 128r55 131r54 134r54 4|12r28 18r30 24r29 30r30 34r39 40r35 48r42 54r40
+. 60r33 66r34 72r39 79r41 88r10 92r35 93r22 94r22 164r56 180r55 196r56 212r55
+. 228r56 244r55 260r55
+20A8*Word_Array(13M11)<integer> 3|117r40 120r43 123r40 126r43 129r40 132r43
+. 135r43 4|171r41 187r44 203r41 219r44 235r41 251r44 267r44
+41V13*Add_Byte_Offset{7|85M9} 4|166s9 182s9 198s9 214s9 230s9 246s9 262s9
+45U14*Write_Reg 4|12s7 18s7 24s7 30s7 36s7 42s7 48s7 54s7 60s7 66s7 72s7
+. 78s7 86s7 104s7 168s7 200s7 232s7
+48V13*Read_Reg{13M11} 4|143s15 149s15 184s14 216s14 248s14 264s14
+X 6 interfac.ads
+38K9*Interfaces 3|1w6 4|3w6 3r25 6|233e15
+81M9*Unsigned_32 4|12r34 18r36 24r35 30r36 48r48 54r46 60r39 66r40 72r45
+. 79r47 88r16 166r38 182r38 198r38 214r38 230r38 246r38 262r38
+141V13*Shift_Left{81M9} 4|102s14
+X 7 system.ads
+55K9*System 3|2w6 9r56 10r4 12r56 13r4 14r56 15r4 17r56 18r4 19r56 20r4 21r56
+. 22r4 23r56 24r4 25r56 26r4 27r56 28r4 29r56 30r4 31r56 32r4 33r56 34r4
+. 35r56 36r4 37r56 38r4 39r56 40r4 42r56 43r4 44r56 45r4 46r56 47r4 48r56
+. 49r4 4|1r6 2r6 165r23 181r23 197r23 213r23 229r23 245r23 261r23 7|169e11
+85M9*Address 3|9r63 10r4 12r63 13r4 14r63 15r4 17r63 18r4 19r63 20r4 21r63
+. 22r4 23r63 24r4 25r63 26r4 27r63 28r4 29r63 30r4 31r63 32r4 33r63 34r4
+. 35r63 36r4 37r63 38r4 39r63 40r4 42r63 43r4 44r63 45r4 46r63 47r4 48r63
+. 49r4 4|165r30 181r30 197r30 213r30 229r30 245r30 261r30
+X 8 s-atacco.ads
+39k16*Address_To_Access_Conversions 4|1w13 8|65e41
+X 9 s-stoele.ads
+40K16*Storage_Elements 4|2w13 9|90e28
+
