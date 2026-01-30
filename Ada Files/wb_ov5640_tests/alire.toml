@@ -1,0 +1,23 @@
+name = "wb_ov5640_tests"
+description = "Tests for wb_ov5640"
+version = "0.1.0-dev"
+
+authors = ["Dipen R"]
+maintainers = ["Dipen R <dipenarathod@gmail.com>"]
+maintainers-logins = ["dipenarathod"]
+licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
+website = ""
+tags = []
+
+[[depends-on]]
+neorv32_hal = "*"
+bare_runtime = "*"
+input_output_helper = "*"
+ada_ml_library="*"
+wb_ov5640_helper = "*"
+
+[[pins]]
+neorv32_hal = { path = ".." } 
+input_output_helper = {path = "../input_output_helper"}
+ada_ml_library={path ="../ada_ml_library"}
+wb_ov5640_helper = {path = "../wb_ov5640_helper"}

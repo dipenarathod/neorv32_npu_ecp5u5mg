@@ -1,0 +1,9 @@
+dependency:ada_ml_library=0.1.0-dev=ed96bf5a96cb75b0ae4d61d15e84d31b1eb2a6757430757418b26e04e08f4280
+dependency:bare_runtime=14.0.0=282b01b920f0d5bb2bac604ac6d9e811f26d175144bc99af963e0381e797ee94
+dependency:input_output_helper=0.1.0-dev=dd8ce6387a168a00815a42a25ab774c5b7b42516a29151ba2fc089c20c846efd
+dependency:neorv32_hal=0.1.0-dev=5d6f1a50193be2098f5449f1178534f1d3af90035c9305154dc4e49eaf7c8b18
+dependency:wb_ov5640_helper=0.1.0-dev=a0943beac7a62500f99ee43b8dcfe7c889b2dd9ba29b67ad3437fe60d6e6da45
+external:LIBRARY_TYPE=default
+external:WB_OV5640_TESTS_LIBRARY_TYPE=default
+profile:wb_ov5640_tests=DEVELOPMENT
+switches:wb_ov5640_tests=-Og,-fdata-sections,-ffunction-sections,-g,-gnatVa,-gnatW8,-gnatw.X,-gnatwa,-gnaty-d,-gnaty3,-gnatyA,-gnatyB,-gnatyI,-gnatyO,-gnatyS,-gnatya,-gnatyb,-gnatyc,-gnatye,-gnatyf,-gnatyh,-gnatyi,-gnatyk,-gnatyl,-gnatym,-gnatyn,-gnatyp,-gnatyr,-gnatyt,-gnatyu,-gnatyx
