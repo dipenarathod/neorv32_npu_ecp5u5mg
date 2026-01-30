@@ -1,0 +1,137 @@
+V "GNAT Lib v14"
+A -Og
+A -gnatA
+A --RTS=/home/dipen/.local/share/alire/builds/bare_runtime_14.0.0_095db6f0/282b01b920f0d5bb2bac604ac6d9e811f26d175144bc99af963e0381e797ee94/
+A -mabi=ilp32
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -gnatwa
+A -gnatw.X
+A -gnatVa
+A -gnaty3
+A -gnatya
+A -gnatyA
+A -gnatyB
+A -gnatyb
+A -gnatyc
+A -gnaty-
+A -gnatyd
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatym
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnatW8
+A -gnat2022
+A -misa-spec=20191213
+A -march=rv32i_zicsr_zifencei
+P ZX
+
+RN
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U input_output_helper.time_measurements%b  input_output_helper-time_measurements.adb  64d0bf3c NE OO PK
+W input_output_helper%s	input_output_helper.adb	input_output_helper.ali
+Z system.img_llu%s	s-imgllu.ads		s-imgllu.ali
+Z system.machine_code%s	s-maccod.ads		s-maccod.ali
+Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+
+U input_output_helper.time_measurements%s  input_output_helper-time_measurements.ads  5122daca EE NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W input_output_helper%s	input_output_helper.adb	input_output_helper.ali
+W neorv32%s		neorv32.ads		neorv32.ali
+W riscv%s		riscv.ads		riscv.ali
+W riscv.csr%s		riscv-csr.ads		riscv-csr.ali
+W riscv.csr_generic%s	riscv-csr_generic.adb	riscv-csr_generic.ali
+W system%s		system.ads		system.ali
+W system.machine_code%s	s-maccod.ads		s-maccod.ali
+W uart0%s		uart0.adb		uart0.ali
+
+D ada.ads		20250921045803 76789da1 ada%s
+D a-textio.ads		20250921045803 6c013a58 ada.text_io%s
+D input_output_helper.ads  20260130122142 bfcd7d93 input_output_helper%s
+D input_output_helper-time_measurements.ads  20260130124111 7a1b980a input_output_helper.time_measurements%s
+D input_output_helper-time_measurements.adb  20260130124013 1ecb2736 input_output_helper.time_measurements%b
+D interfac.ads		20250921045803 9111f9c1 interfaces%s
+D neorv32.ads		20251024231132 d5039e82 neorv32%s
+D riscv.ads		20251024231132 01b22458 riscv%s
+D riscv-csr.ads		20251024231132 0134c358 riscv.csr%s
+D riscv-csr_generic.ads	20251024231132 5bcb4405 riscv.csr_generic%s
+D riscv-types.ads	20251024231132 d60fb95a riscv.types%s
+D system.ads		20250921045803 28e4acdd system%s
+D s-atacco.ads		20250921045803 5868e3ba system.address_to_access_conversions%s
+D s-imageu.ads		20250921045803 b0b50650 system.image_u%s
+D s-imgllu.ads		20250921045803 55ba53d8 system.img_llu%s
+D s-maccod.ads		20250921045803 cdca081e system.machine_code%s
+D s-stoele.ads		20250921045803 ccded4e8 system.storage_elements%s
+D s-unstyp.ads		20250921045803 fa2a7f59 system.unsigned_types%s
+D s-valspe.ads		20250921045803 b0fcd073 system.val_spec%s
+D s-vauspe.ads		20250921045803 89269ba5 system.value_u_spec%s
+D s-vauspe.adb		20250921045803 8524adb4 system.value_u_spec%b
+D s-vs_llu.ads		20250921045803 8f3536c5 system.vs_llu%s
+D uart0.ads		20251024231132 bac314ca uart0%s
+G a e
+G c Z s b [read_cycle input_output_helper__time_measurements 17 13 none]
+G c Z s b [print_time input_output_helper__time_measurements 18 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 4|1r6 1r23
+X 2 a-textio.ads
+36K13*Text_IO 62e16 4|1w10 1r27
+54U14*Put_Line 5|26s7 27s7
+X 3 input_output_helper.ads
+5K9*Input_Output_Helper 74e24 5|1r14 30r5
+X 4 input_output_helper-time_measurements.ads
+9K29*Time_Measurements 3|5k9 4|20e4 5|1b34 30l25 30t42
+11m4*Clock_Hz{6|84M9} 5|24r69
+12m4*Start_Cycles{6|84M9}
+13m4*End_Cycles{6|84M9}
+14m4*Delta_Cycles{6|84M9}
+17V13*Read_Cycle{6|84M9} 5|3b13 20l8 20t18
+18U14*Print_Time 18>26 18>41 5|23b14 28l8 28t18
+18a26 Name{string} 5|23b26 26r17 27r17
+18m41 Cycles{6|84M9} 5|23b41 24r47 26r57
+X 5 input_output_helper-time_measurements.adb
+4m7 Low{6|81M9} 10m52 10r52 19r66
+5m7 High{6|81M9} 16m52 16r52 19r39
+24m7 Microseconds{6|84M9} 27r60
+X 6 interfac.ads
+81M9*Unsigned_32 5|4r14 5r14 10r22 16r22
+84M9*Unsigned_64 4|11r28 12r19 13r19 14r19 17r31 18r50 5|3r31 19r26 19r53
+. 23r50 24r31 26r38 27r41
+166V13*Shift_Left{84M9} 5|19s14
+X 7 neorv32.ads
+11K9*neorv32 4|3w6 3r31 7|107e12
+X 8 riscv.ads
+32K9*RISCV 4|4r6 4r31 5r6 5r31 8|33e10
+X 9 riscv-csr.ads
+35K15*CSR 4|4w12 4r37 9|125e14
+X 10 riscv-csr_generic.ads
+34K15*CSR_Generic 4|5w12 5r37 10|133e22
+X 12 system.ads
+55K9*System 4|7r6 7r31 12|169e11
+X 16 s-maccod.ads
+36K16*Machine_Code 4|7w13 7r38 16|133e24
+47I9*Asm_Output_Operand<integer>
+85U14*Asm 5|8s7 14s7
+87i6 Outputs{47I9} 5|10r10 16r10
+90b6 Volatile{boolean} 5|11r10 17r10
+X 23 uart0.ads
+1K9*Uart0 4|2w6 23|5e10
+

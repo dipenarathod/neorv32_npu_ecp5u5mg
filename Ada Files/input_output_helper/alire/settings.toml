@@ -1,0 +1,2 @@
+last_build_profile = "bare_runtime=RELEASE,gnat_riscv64_elf=RELEASE,input_output_helper=DEVELOPMENT,neorv32_hal=RELEASE"
+

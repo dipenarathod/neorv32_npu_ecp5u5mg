@@ -1,0 +1,4 @@
+cannot generate code for file input_output_helper-debug.ads (package spec)
+input_output_helper-debug.ads:1:37: (style) trailing spaces not permitted [-gnatyb]
+input_output_helper-debug.ads:2:06: (style) two spaces required [-gnatyc]
+input_output_helper-debug.ads:6:06: (style) two spaces required [-gnatyc]

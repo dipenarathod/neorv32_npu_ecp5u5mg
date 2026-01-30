@@ -1,0 +1,13 @@
+[LIBRARY PATH]
+/home/dipen/Downloads/neorv32-halv2/input_output_helper/lib/libInput_Output_Helper.a
+[OBJECT FILES]
+/home/dipen/Downloads/neorv32-halv2/input_output_helper/obj/development/input_output_helper-debug.o
+20260130122430
+/home/dipen/Downloads/neorv32-halv2/input_output_helper/obj/development/input_output_helper-time_measurements.o
+20260130124113
+/home/dipen/Downloads/neorv32-halv2/input_output_helper/obj/development/input_output_helper-utils.o
+20260130122145
+/home/dipen/Downloads/neorv32-halv2/input_output_helper/obj/development/input_output_helper.o
+20260130122229
+/home/dipen/Downloads/neorv32-halv2/input_output_helper/obj/development/input_output_helper_config.o
+20260130124056

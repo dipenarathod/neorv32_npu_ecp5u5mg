@@ -1,0 +1,140 @@
+V "GNAT Lib v14"
+A -Og
+A -gnatA
+A --RTS=/home/dipen/.local/share/alire/builds/bare_runtime_14.0.0_095db6f0/282b01b920f0d5bb2bac604ac6d9e811f26d175144bc99af963e0381e797ee94/
+A -mabi=ilp32
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -gnatwa
+A -gnatw.X
+A -gnatVa
+A -gnaty3
+A -gnatya
+A -gnatyA
+A -gnatyB
+A -gnatyb
+A -gnatyc
+A -gnaty-
+A -gnatyd
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatym
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnatW8
+A -gnat2022
+A -misa-spec=20191213
+A -march=rv32i_zicsr_zifencei
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U input_output_helper.debug%b  input_output_helper-debug.adb  fa8ea908 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W input_output_helper%s	input_output_helper.adb	input_output_helper.ali
+W input_output_helper.utils%s  input_output_helper-utils.adb  input_output_helper-utils.ali
+W interfaces%s		interfac.ads		interfac.ali
+Z system.fat_flt%s	s-fatflt.ads		s-fatflt.ali
+Z system.img_flt%s	s-imgflt.ads		s-imgflt.ali
+
+U input_output_helper.debug%s  input_output_helper-debug.ads  7ceeddc9 EE NE OO PK
+W input_output_helper%s	input_output_helper.adb	input_output_helper.ali
+
+D ada.ads		20250921045803 76789da1 ada%s
+D a-textio.ads		20250921045803 6c013a58 ada.text_io%s
+D input_output_helper.ads  20260130122142 bfcd7d93 input_output_helper%s
+D input_output_helper-debug.ads  20260130122334 c323a05a input_output_helper.debug%s
+D input_output_helper-debug.adb  20260130121554 d74b9f55 input_output_helper.debug%b
+D input_output_helper-utils.ads  20260130120944 13f6559e input_output_helper.utils%s
+D interfac.ads		20250921045803 9111f9c1 interfaces%s
+D system.ads		20250921045803 28e4acdd system%s
+D s-atacco.ads		20250921045803 5868e3ba system.address_to_access_conversions%s
+D s-fatflt.ads		20250921045803 11beb392 system.fat_flt%s
+D s-fatgen.ads		20250921045803 d28c6cfe system.fat_gen%s
+D s-imager.ads		20250921045803 45c7157d system.image_r%s
+D s-imageu.ads		20250921045803 b0b50650 system.image_u%s
+D s-imgflt.ads		20250921045803 d12816b5 system.img_flt%s
+D s-imguns.ads		20250921045803 c4e23690 system.img_uns%s
+D s-powflt.ads		20250921045803 a51ab9b8 system.powten_flt%s
+D s-stoele.ads		20250921045803 ccded4e8 system.storage_elements%s
+D s-unstyp.ads		20250921045803 fa2a7f59 system.unsigned_types%s
+D s-valspe.ads		20250921045803 b0fcd073 system.val_spec%s
+D s-vauspe.ads		20250921045803 89269ba5 system.value_u_spec%s
+D s-vauspe.adb		20250921045803 8524adb4 system.value_u_spec%b
+D s-vs_uns.ads		20250921045803 e7f47a27 system.vs_uns%s
+G a e
+G c Z s b [print_tensor_q07 input_output_helper__debug 3 14 none]
+G c Z s b [print_vector_q07 input_output_helper__debug 7 14 none]
+G r c none [print_tensor_q07 input_output_helper__debug 3 14 none] [unpack_four_bytes input_output_helper__utils 4 14 none]
+G r c none [print_tensor_q07 input_output_helper__debug 3 14 none] [q07_to_float input_output_helper 70 12 none]
+G r c none [print_vector_q07 input_output_helper__debug 7 14 none] [unpack_four_bytes input_output_helper__utils 4 14 none]
+G r c none [print_vector_q07 input_output_helper__debug 7 14 none] [q07_to_float input_output_helper 70 12 none]
+X 1 ada.ads
+16K9*Ada 20e8 5|1r6 1r22
+X 2 a-textio.ads
+36K13*Text_IO 62e16 5|1w10 1r26
+50U14*Put 5|17s10 52s16 53s16 54s16 72s7 103s13 104s13 105s13
+54U14*Put_Line 5|14s7 57s10 71s7 108s7
+58U14*New_Line 5|59s7 109s7
+X 3 input_output_helper.ads
+5K9*Input_Output_Helper 74e24 4|1r9 10r5 5|2r6 2r37 4r14 112r5
+10M11*Unsigned_Byte{7|70M9} 5|10r25 67r25
+13M11*Word{7|81M9}
+20A8*Word_Array(13M11)<integer> 4|4r29 8r29 5|8r29 65r29
+70V12*Q07_To_Float{float} 5|37s35 40s35 43s35 46s35 88s32 91s32 94s32 97s32
+X 4 input_output_helper-debug.ads
+1K29*Debug 3|5k9 4|10l25 10e30 5|4b34 112l25 112t30
+3U14*Print_Tensor_Q07 4>7 4>22 4>41 5|7b14 60l8 60t24
+4a7 Name{string} 5|8b7 14r17
+4a22 Data{3|20A8} 5|8b22 31r35
+4i41 Dimension{natural} 5|8b41 15r23 18r26 23r20
+7U14*Print_Vector_Q07 8>7 8>22 8>41 5|64b14 110l8 110t24
+8a7 Name{string} 5|65b7 71r17
+8a22 Data{3|20A8} 5|65b22 82r32
+8i41 Vector_Length{natural} 5|65b41 73r25
+X 5 input_output_helper-debug.adb
+10m7 B0{3|10M11} 31m54 37r49
+10m11 B1{3|10M11} 31m58 40r49
+10m15 B2{3|10M11} 31m62 43r49
+10m19 B3{3|10M11} 31m66 46r49
+11f7 Float_Val{float} 37m22 40m22 43m22 46m22 49m22 53r34
+12i7 Last_Word_Index{natural} 32m16
+15i11 Row{integer} 22r18
+18i14 Col{integer} 24r20
+21i16 Index{natural} 25r49 27r18
+25i16 Word_Index{natural} 31r41 32r35
+26i16 Byte_Sel{natural} 35r21
+67m7 B0{3|10M11} 82m51 88r46
+67m11 B1{3|10M11} 82m55 91r46
+67m15 B2{3|10M11} 82m59 94r46
+67m19 B3{3|10M11} 82m63 97r46
+68f7 Float_Val{float} 88m19 91m19 94m19 97m19 100m19 104r31
+69i7 Last_Word_Index{natural} 83m13
+73i11 Index{integer} 76r46 78r15
+76i13 Word_Index{natural} 82r38 83r32
+77i13 Byte_Sel{natural} 86r18
+X 6 input_output_helper-utils.ads
+1K29*Utils 5|2w26 2r57 6|8e30
+4U14*Unpack_Four_Bytes 5|31s16 82s13
+X 7 interfac.ads
+38K9*Interfaces 5|3w6 3r22 7|233e15
+70M9*Unsigned_8
+81M9*Unsigned_32
+

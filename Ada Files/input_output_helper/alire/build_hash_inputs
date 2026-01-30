@@ -1,0 +1,7 @@
+dependency:bare_runtime=14.0.0=282b01b920f0d5bb2bac604ac6d9e811f26d175144bc99af963e0381e797ee94
+dependency:neorv32_hal=0.1.0-dev=5d6f1a50193be2098f5449f1178534f1d3af90035c9305154dc4e49eaf7c8b18
+external:INPUT_OUTPUT_HELPER_LIBRARY_TYPE=default
+external:LIBRARY_TYPE=default
+profile:input_output_helper=RELEASE
+switches:input_output_helper=-O3,-fdata-sections,-ffunction-sections,-gnatW8,-gnatn
+version:gnat_riscv64_elf=14.2.1
