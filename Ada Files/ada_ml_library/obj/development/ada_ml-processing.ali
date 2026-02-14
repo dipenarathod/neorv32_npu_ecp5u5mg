@@ -1,0 +1,129 @@
+V "GNAT Lib v14"
+A -Og
+A -gnatA
+A --RTS=/home/dipen/.local/share/alire/builds/bare_runtime_14.0.0_095db6f0/282b01b920f0d5bb2bac604ac6d9e811f26d175144bc99af963e0381e797ee94/
+A -mabi=ilp32
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -gnatwa
+A -gnatw.X
+A -gnatVa
+A -gnaty3
+A -gnatya
+A -gnatyA
+A -gnatyB
+A -gnatyb
+A -gnatyc
+A -gnaty-
+A -gnatyd
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatym
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnatW8
+A -gnat2022
+A -misa-spec=20191213
+A -march=rv32i_zicsr_zifencei
+P ZX
+
+RN
+RV NO_IO
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada_ml.processing%b	ada_ml-processing.adb	359aae17 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada_ml%s		ada_ml.adb		ada_ml.ali
+W ada_ml.utils%s	ada_ml-utils.adb	ada_ml-utils.ali
+W interfaces%s		interfac.ads		interfac.ali
+
+U ada_ml.processing%s	ada_ml-processing.ads	0ac30718 EE NE OO PK
+W ada_ml%s		ada_ml.adb		ada_ml.ali
+
+D ada.ads		20250921045803 76789da1 ada%s
+D a-textio.ads		20250921045803 6c013a58 ada.text_io%s
+D ada_ml.ads		20260121164511 cad0c6b5 ada_ml%s
+D ada_ml-processing.ads	20260121164747 c013c1ad ada_ml.processing%s
+D ada_ml-processing.adb	20260121164835 22a0d4fb ada_ml.processing%b
+D ada_ml-utils.ads	20260121165137 2a3978d8 ada_ml.utils%s
+D interfac.ads		20250921045803 9111f9c1 interfaces%s
+D system.ads		20250921045803 28e4acdd system%s
+G a e
+G c Z s b [apply_softmax_all_words ada_ml__processing 3 14 none]
+G r c none [apply_softmax_all_words ada_ml__processing 3 14 none] [tensor_words ada_ml 105 13 none]
+G r c none [apply_softmax_all_words ada_ml__processing 3 14 none] [set_softmax_mode ada_ml 113 14 none]
+G r c none [apply_softmax_all_words ada_ml__processing 3 14 none] [set_word_index ada_ml 112 14 none]
+G r c none [apply_softmax_all_words ada_ml__processing 3 14 none] [perform_softmax ada_ml 139 14 none]
+G r c none [apply_softmax_all_words ada_ml__processing 3 14 none] [wait_while_busy ada_ml 144 14 none]
+G r c none [apply_softmax_all_words ada_ml__processing 3 14 none] [write_reg ada_ml 96 14 none]
+G r c none [apply_softmax_all_words ada_ml__processing 3 14 none] [read_word_from_a ada_ml 150 13 none]
+G r c none [apply_softmax_all_words ada_ml__processing 3 14 none] [unpack_four_bytes ada_ml__utils 4 14 none]
+G r c none [apply_softmax_all_words ada_ml__processing 3 14 none] [pack_four_bytes ada_ml__utils 3 13 none]
+G r c none [apply_softmax_all_words ada_ml__processing 3 14 none] [write_word_in_a ada_ml 147 14 none]
+G r c none [apply_softmax_all_words ada_ml__processing 3 14 none] [set_sum_param ada_ml 114 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 5|2r6 2r23
+X 2 a-textio.ads
+36K13*Text_IO 62e16 5|2w10 2r27
+X 3 ada_ml.ads
+4K9*Ada_Ml 199e11 4|1r9 8r5 5|1r6 1r24 6r14 129r5
+9M12*Unsigned_Byte{7|70M9} 5|18r24
+12M12*Word{7|81M9} 5|15r24 16r24 17r24 80r17 81r17 82r17 83r17 92r29 95r29
+. 95r41 99r24 99r36 99r48 116r22
+28m4*CTRL_Addr{8|85M9} 5|37r21 123r21
+85m4*SOFTMAX_MODE_EXP{12M12} 5|31r25
+86m4*SOFTMAX_MODE_DIV{12M12} 5|117r25
+96U14*Write_Reg 5|37s10 123s10
+105V13*Tensor_Words{natural} 5|14s44
+112U14*Set_Word_Index 5|34s10 120s10
+113U14*Set_Softmax_Mode 5|31s7 117s7
+114U14*Set_Sum_Param 5|116s7
+139U14*Perform_Softmax 5|35s10 121s10
+144U14*Wait_While_Busy 5|36s10 122s10
+147U14*Write_Word_In_A 5|66s10
+150V13*Read_Word_From_A{12M12} 5|44s15 76s18 88s15
+X 4 ada_ml-processing.ads
+1K16*Processing 3|4k9 4|8l12 8e22 5|6b21 129l12 129t22
+3U14*Apply_Softmax_All_Words 4>7 4>20 5|11b14 125l8 125t31
+4i7 N{natural} 5|12b7 14r58 22r34 22r41 22r45
+4b20 One_Dimensional{boolean} 5|12b20 14r61 22r13
+X 5 ada_ml-processing.adb
+14i7 Words{natural} 33r21 119r21
+15m7 Sum{3|12M12} 78m13 79r15 92m16 92r23 95m16 95r23 98m16 99r18 109r10
+. 111r24
+16m7 Inverted_Sum{3|12M12} 110m10 116r28
+17m7 W{3|12M12} 44m10 45r29 65m10 66r39 76m13 77r32 88m10 89r29
+18m7 B0{3|9M12} 45m32 65r32 77m35 80r23 89m32 92r35 95r35 99r30
+18m11 B1{3|9M12} 45m36 49m16 65r36 77m39 81r23 89m36 95r47 99r42
+18m15 B2{3|9M12} 45m40 50m16 54m16 65r40 77m43 82r23 89m40 99r54
+18m19 B3{3|9M12} 45m44 51m16 55m16 58m16 65r44 77m47 83r23 89m44
+21i7 Total_Elements{natural} 25r40 28r45
+25i7 Full_Words{natural} 44r33 66r27 74r10 75r24 88r33
+28i7 Left_Over_Bytes{natural} 42r10 47r15 87r10 90r15
+33i11 I{integer} 34r26
+75i14 I{integer} 76r36
+119i11 I{integer} 120r26
+X 6 ada_ml-utils.ads
+2K16*Utils 5|1w13 1r31 6|7e17
+3V13*Pack_Four_Bytes{3|12M12} 5|65s15
+4U14*Unpack_Four_Bytes 5|45s10 77s13 89s10
+X 7 interfac.ads
+38K9*Interfaces 5|3w6 3r22 7|233e15
+70M9*Unsigned_8
+81M9*Unsigned_32
+X 8 system.ads
+85M9*Address
+

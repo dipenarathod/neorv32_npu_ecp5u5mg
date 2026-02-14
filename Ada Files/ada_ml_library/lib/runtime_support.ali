@@ -1,0 +1,34 @@
+V "GNAT Lib v14"
+A -O3
+A -gnatA
+A --RTS=/home/dipen/.local/share/alire/builds/bare_runtime_14.0.0_095db6f0/282b01b920f0d5bb2bac604ac6d9e811f26d175144bc99af963e0381e797ee94/
+A -mabi=ilp32
+A -gnatn
+A -ffunction-sections
+A -fdata-sections
+A -gnatW8
+A -gnat2022
+A -misa-spec=20191213
+A -march=rv32i_zicsr_zifencei
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U runtime_support%b	runtime_support.adb	4ff5847b NE OO PK
+
+U runtime_support%s	runtime_support.ads	2d4be45f EE NE OO PK
+W interrupts%s		interrupts.adb		interrupts.ali
+
+D interrupts.ads	20251024231132 56bb57a4 interrupts%s
+D runtime_support.ads	20250922081033 7bf0b3fb runtime_support%s
+D runtime_support.adb	20250922080258 34053780 runtime_support%b
+D system.ads		20250921045803 28e4acdd system%s
+G a e
+G c Z s b [exit_handler runtime_support 4 14 none]
+X 1 interrupts.ads
+1K9*Interrupts 79e15 2|1w6 1r22
+X 2 runtime_support.ads
+3K9*Runtime_Support 6l5 6e20 3|4b14 11l5 11t20
+4U14*Exit_Handler 3|5b14 10l8 10t20
+

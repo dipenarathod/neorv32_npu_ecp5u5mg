@@ -1,0 +1,143 @@
+# THIS FILE IS GENERATED. DO NOT EDIT.
+
+[solution]
+[solution.context]
+solved = true
+[[solution.state]]
+crate = "bare_runtime"
+fulfilment = "solved"
+pinned = false
+transitivity = "direct"
+versions = "*"
+[solution.state.release]
+authors = [
+"AdaCore",
+]
+description = "Minimal Ada/SPARK run-time for embedded or other restricted targets"
+licenses = "GPL-3.0-or-later WITH GCC-exception-3.1"
+long-description = "## Usage\n\nFirst edit you `alire.toml` file and add the following elements:\n - Add `bare_runtime` in the dependency list:\n   ```toml\n   [[depends-on]]\n   bare_runtime = \"*\"\n   ```\n - Add cross GNAT in the dependency list (e.g. gnat_arm_elf):\n   ```toml\n   [[depends-on]]\n   gnat_arm_elf = \"*\"\n   ```\n - Set the architecture build switches, we use ARM Cortex-M4F as an example here:\n   ```toml\n   [gpr-set-externals]\n   BARE_RUNTIME_SWITCHES = \"-mlittle-endian -mthumb -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16\"\n   ```\n\nThen edit your project file to add the following elements:\n - \"with\" the run-time project file. With this, gprbuild will compile the run-time before your application\n   ```ada\n   with \"bare_runtime.gpr\";\n   ```\n - Specify the `Target` and `Runtime` attributes:\n   ```ada\n      for Target use \"arm-eabi\";\n      for Runtime (\"Ada\") use Bare_Runtime'Runtime (\"Ada\");\n"
+maintainers = [
+"Fabien Chouteau <fabien.chouteau@gmail.com>",
+]
+maintainers-logins = [
+"Fabien-Chouteau",
+]
+name = "bare_runtime"
+tags = [
+"embedded",
+"runtime",
+]
+version = "14.0.0"
+website = "https://github.com/Fabien-Chouteau/bare_runtime"
+[solution.state.release.configuration]
+auto_gpr_with = true
+disabled = false
+generate_ada = true
+generate_c = false
+generate_gpr = false
+output_dir = "config"
+[solution.state.release.configuration.variables]
+[solution.state.release.configuration.variables.LCH_Print_Info]
+default = false
+type = "Boolean"
+[solution.state.release.configuration.variables.LCH_Reset]
+default = false
+type = "Boolean"
+[solution.state.release.origin]
+commit = "095db6f0be63e3ee266b8dea6d00e8d0e07e7144"
+url = "git+https://github.com/Fabien-Chouteau/bare_runtime.git"
+[[solution.state.release.depends-on]]
+gnat = "^14"
+[[solution.state]]
+crate = "gnat"
+fulfilment = "solved"
+pinned = false
+transitivity = "indirect"
+versions = "^14"
+[solution.state.release]
+auto-gpr-with = false
+description = "The GNAT Ada compiler - RISC-V cross-compiler"
+licenses = "GPL-3.0-or-later AND GPL-3.0-or-later WITH GCC-exception-3.1"
+maintainers = [
+"chouteau@adacore.com",
+]
+maintainers-logins = [
+"Fabien-Chouteau",
+]
+name = "gnat_riscv64_elf"
+provides = [
+"gnat=14.2.1",
+]
+version = "14.2.1"
+[solution.state.release.configuration]
+auto_gpr_with = true
+disabled = true
+generate_ada = true
+generate_c = true
+generate_gpr = true
+output_dir = "config"
+[solution.state.release.environment]
+[solution.state.release.environment.PATH]
+prepend = "${CRATE_ROOT}/bin"
+[solution.state.release.origin]
+binary = true
+hashes = [
+"sha256:4f7383108b971801ece9f24efed02cd918202da22107739996843415ee72522b",
+]
+url = "https://github.com/alire-project/GNAT-FSF-builds/releases/download/gnat-14.2.0-1/gnat-riscv64-elf-linux64-x86_64-14.2.0-1.tar.gz"
+[[solution.state]]
+crate = "gnat_riscv64_elf"
+fulfilment = "solved"
+pinned = false
+transitivity = "indirect"
+versions = "*"
+[solution.state.release]
+auto-gpr-with = false
+description = "The GNAT Ada compiler - RISC-V cross-compiler"
+licenses = "GPL-3.0-or-later AND GPL-3.0-or-later WITH GCC-exception-3.1"
+maintainers = [
+"chouteau@adacore.com",
+]
+maintainers-logins = [
+"Fabien-Chouteau",
+]
+name = "gnat_riscv64_elf"
+provides = [
+"gnat=14.2.1",
+]
+version = "14.2.1"
+[solution.state.release.configuration]
+auto_gpr_with = true
+disabled = true
+generate_ada = true
+generate_c = true
+generate_gpr = true
+output_dir = "config"
+[solution.state.release.environment]
+[solution.state.release.environment.PATH]
+prepend = "${CRATE_ROOT}/bin"
+[solution.state.release.origin]
+binary = true
+hashes = [
+"sha256:4f7383108b971801ece9f24efed02cd918202da22107739996843415ee72522b",
+]
+url = "https://github.com/alire-project/GNAT-FSF-builds/releases/download/gnat-14.2.0-1/gnat-riscv64-elf-linux64-x86_64-14.2.0-1.tar.gz"
+[[solution.state]]
+crate = "input_output_helper"
+fulfilment = "linked"
+pinned = false
+transitivity = "direct"
+versions = "*"
+[solution.state.link]
+lockfiled = true
+path = "../input_output_helper"
+[[solution.state]]
+crate = "neorv32_hal"
+fulfilment = "linked"
+pinned = false
+transitivity = "direct"
+versions = "*"
+[solution.state.link]
+lockfiled = true
+path = ".."
+
