@@ -1,5 +1,5 @@
 All peripherals are clients. All listed items build on the one listed below:
-- wb_Larger_tensors: 10KB for Inputs, 36KB for weights, 8KB for biases, 10KB for output
+- wb_larger_tensors: 10KB for Inputs, 36KB for weights, 8KB for biases, 10KB for output
 - wb_dense: Added Dense
 - wb_softmax: Added SoftMax
 - wb_activation: Added ReLU
