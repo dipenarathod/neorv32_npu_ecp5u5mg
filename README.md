@@ -4,7 +4,7 @@
 
 The Wishbone NPU is a hardware peripheral that accelerates neural network inference on embedded systems. It connects to any processor with a [Wishbone B4](https://cdn.opencores.org/downloads/wbspec_b4.pdf) bus and offloads common ML operations — dense layers, convolutions, activations, and pooling — to dedicated hardware. Instead of burning CPU cycles on matrix math, you write operands to the NPU, trigger an operation, and read back results.
 
-The reference implementation runs on the [NEORV32](https://github.com/stnolting/neorv32) RISC-V soft-core on a **Lattice ECP5** FPGA, with an Ada firmware stack and multiple demo applications. The NPU itself is platform-independent VHDL — it works with any Wishbone master on any FPGA.
+The reference implementation runs on the [NEORV32](https://github.com/stnolting/neorv32) RISC-V soft-core on a **Lattice ECP5U5MG-85F** FPGA, with an Ada firmware stack and multiple demo applications. The NPU itself is platform-independent VHDL — it works with any Wishbone master on any FPGA.
 
 Developed as a capstone project at Penn State, sponsored by [AdaCore](https://www.adacore.com/).
 
@@ -54,13 +54,13 @@ The NPU handles all operations through a single Finite State Machine controlled 
 
 | Operation | What It Does | Data Format |
 |-----------|-------------|-------------|
-| **Dense (INT8 GEMM)** | Fully connected layer — MAC with INT32 accumulator, requantize to INT8 | INT8 in → INT32 intermediate → INT8 out |
-| **Conv2D** | 2D convolution with N×N kernel + bias. Output: (H−K+1)×(W−K+1) | INT8, signed 20-bit accumulator |
+| **Dense (INT8 GEMM)** | Fully connected layer — MAC with INT32 accumulator, requantize to INT8 | INT8 (Q0.7)|
+| **Conv2D** | 2D convolution with 3×3 kernel + bias. Supports multiple input and output channels| INT8 (Q0.7)|
 | **ReLU** | max(0, x) on 4 packed INT8 values per word | INT8 (Q0.7) |
 | **Sigmoid** | Linear-approximated sigmoid on 4 packed values | INT8 (Q0.7) |
 | **SoftMax** | Two-phase: exponents + running sum, then divide | INT8 (Q0.7) |
-| **Max Pooling** | 2×2 window → maximum value | INT8 |
-| **Average Pooling** | 2×2 window → average value | INT8 |
+| **Max Pooling** | 2×2 window → maximum value | INT8 (Q0.7) |
+| **Average Pooling** | 2×2 window → average value | INT8 (Q0.7) |
 
 ---
 
@@ -112,7 +112,7 @@ flowchart LR
 |------|---------|---------|
 | [Alire](https://alire.ada.dev/) | Ada build system (installs GNAT + RISC-V cross-compiler) | `curl -L https://alire.ada.dev/install.sh \| sh` |
 | `image_gen` | Converts binary → NEORV32 executable | Build from [NEORV32 repo](https://github.com/GNAT-Academic-Program/neorv32-setups) `sw/image_gen/` |
-| [Lattice Diamond](https://www.latticesemi.com/latticediamond) | FPGA synthesis for ECP5 | Free license from Lattice |
+| [Lattice Diamond](https://www.latticesemi.com/latticediamond) | FPGA synthesis tool for ECP5U5MG | Free or Paid depending on FPGA. Free 1-year license for ECP5U5MG |
 | [GTKTerm](https://github.com/Jeija/gtkterm) | Serial terminal for UART upload | `sudo apt install gtkterm` |
 | [Python 3](https://www.python.org/) + [Keras](https://keras.io/) | Model training and weight export | `pip install keras numpy` |
 | [GHDL](https://github.com/ghdl/ghdl) + [GTKWave](https://gtkwave.sourceforge.net/) | VHDL simulation and waveform viewing (optional) | `sudo apt install ghdl gtkwave` |
