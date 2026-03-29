@@ -1,0 +1,20 @@
+name = "wb_npu_tests"
+description = "Test cases for NEORV32 + NPU system"
+version = "0.1.0-dev"
+
+authors = ["Dipen R"]
+maintainers = ["Dipen R <dipenarathod@gmail.com>"]
+maintainers-logins = ["dipenarathod"]
+licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
+website = ""
+tags = []
+
+[[depends-on]]
+neorv32_hal = "*"
+bare_runtime= "*"
+wb_npu_helper="*"
+input_output_helper = "*"
+[[pins]]
+neorv32_hal = { path = ".." } 
+wb_npu_helper={path ="../wb_npu_helper"}
+input_output_helper = {path = "../input_output_helper"}
