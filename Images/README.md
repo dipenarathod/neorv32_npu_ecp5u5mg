@@ -1,2 +1,2 @@
 ## Images
-Stores images used in this repositort
+Stores images used in this repository
