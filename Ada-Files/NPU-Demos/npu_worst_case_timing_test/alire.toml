@@ -1,5 +1,5 @@
 name = "npu_worst_case_timing_test"
-description = "NPU worst-case timing test"
+description = "NPU Worst Case Timing Test"
 version = "0.1.0-dev"
 
 authors = ["Dipen R"]
@@ -11,11 +11,10 @@ tags = []
 
 [[depends-on]]
 neorv32_hal = "*"
-bare_runtime = "*"
-wb_npu_helper = "*"
+bare_runtime= "*"
+wb_npu_helper="*"
 input_output_helper = "*"
-
 [[pins]]
-neorv32_hal = { path = ".." }
-wb_npu_helper = { path = "../wb_npu_helper" }
-input_output_helper = { path = "../input_output_helper" }
+neorv32_hal = { path = ".." } 
+wb_npu_helper={path ="../wb_npu_helper"}
+input_output_helper = {path = "../input_output_helper"}
