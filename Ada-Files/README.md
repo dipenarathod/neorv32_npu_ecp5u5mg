@@ -4,46 +4,36 @@ This directory contains all Ada software that runs **on** the NEORV32 RISC-V pro
 
 ## Libraries
 
-### Ada_ML (NPU Driver)
+### Wb_Npu_Helper (NPU Driver)
 
 The core driver library that wraps the NPU's memory-mapped registers into clean Ada procedure calls. It handles tensor window I/O, index math, opcode dispatch, and start/done handshakes. All hardware access goes through the NEORV32 Ada HAL — the library never touches registers directly.
 
 | Child Package | Responsibility |
 |---------------|----------------|
-| `Ada_ML.Dense` | Dense-layer driver loops, weight/bias sequencing, requantization |
-| `Ada_ML.Activation` | ReLU, Sigmoid, and SoftMax application loops |
-| `Ada_ML.Pooling` | 2×2 max and average pooling loops |
-| `Ada_ML.Processing` | Higher-level inference pipeline helpers |
-| `Ada_ML.Utils` | Pack/unpack INT8 ↔ 32-bit word, fixed-point conversion |
-| `Ada_ML.Debug` | Register printing and debug output over UART |
-
-**If you're porting to a different language or processor**, this library is the definitive reference for which registers to access, in what order, and how data should be formatted.
-
-### Input_Output_Helper (I/O Utilities)
-
-Shared utilities for formatted UART output and performance measurement.
-
-| Child Package | Responsibility |
-|---------------|----------------|
-| `Input_Output_Helper.Utils` | Pack/unpack helpers, array conversion |
-| `Input_Output_Helper.Debug` | Pretty-print tensors, vectors, and inference results |
-| `Input_Output_Helper.Time_Measurements` | CPU cycle counting for benchmarking |
+| `Wb_Npu_Address_Map` | Modify this file to specify the addresses used for registers/tensors in the NPU |
+| `Wb_Npu_Helper.Dense` | Dense-layer driver loops, weight/bias sequencing, requantization |
+| `Wb_Npu_Helper.Activation` | ReLU, Sigmoid, and SoftMax application loops |
+| `Wb_Npu_Helper.Pooling` | 2×2 max and average pooling loops |
+| `Wb_Npu_Helper.Processing` | Higher-level inference pipeline helpers |
+| `Wb_Npu_Helper.Utils` | Pack/unpack INT8 ↔ 32-bit word, fixed-point conversion |
+| `Wb_Npu_Helper.Debug` | Register printing and debug output over UART |
 
 ## Demo Applications
 
 Each demo is a standalone [Alire](https://alire.ada.dev/) project that demonstrates end-to-end inference on the NEORV32 + NPU.
 
-| Demo | Model | What It Does |
-|------|-------|--------------|
-| **MNIST 28×28** | 784 → Dense → 10 | Classifies handwritten digits (0–9) at full resolution |
-| **Breast Cancer** | 30 → Dense → 2 | Binary classification on tabular medical data |
-| **Integration Test** | Multiple models | Runs MNIST 14×14 + Rock-Paper-Scissors to verify all NPU operations |
+| Demo | What It Does |
+|------|--------------|
+| **MNIST 14×14** | Classifies handwritten digits (0–9) from a resized MNIST Dataset. 28x28 images resized to 14x14 |
+| **MNIST 28×28** | Classifies handwritten digits (0–9) from the MNIST Dataset at full resolution |
+| **Breast Cancer** | Binary classification of a tumor as benign and malignant. Uses the Wisconsin Breast Cancer Dataset |
+| **Integration Test** | **Uses the camera controller and Wishbone interconnect** Detect rock-paper-scissors hand gestures |
 
 Each demo project contains:
 - `src/*.adb` — main program that loads weights, runs inference, prints results
 - `src/*_weights.ads` — pre-exported INT8 fixed-point weight constants
 - `src/*_samples*.ads` — test input data (e.g., pixel arrays for specific digits)
-- `src/runtime_support.*` — bare-metal runtime support for the NEORV32
+- `src/runtime_support.*` — Exit handler for the NEORV32
 - `alire.toml` / `*.gpr` — Alire project manifest and GNAT project file
 
 ## Build & Flash
