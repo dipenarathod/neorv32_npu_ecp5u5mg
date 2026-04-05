@@ -6,11 +6,11 @@ abstract project Wb_Npu_Helper_Config is
    Crate_Version := "0.1.0-dev";
    Crate_Name := "wb_npu_helper";
 
-   Alire_Host_OS := "linux";
+   Alire_Host_OS := "windows";
 
    Alire_Host_Arch := "x86_64";
 
-   Alire_Host_Distro := "ubuntu";
+   Alire_Host_Distro := "msys2";
    Ada_Compiler_Switches := External_As_List ("ADAFLAGS", " ");
    Ada_Compiler_Switches := Ada_Compiler_Switches &
           (

@@ -1,0 +1,83 @@
+V "GNAT Lib v14"
+A -Og
+A -O3
+A -gnatA
+A --RTS=C:\Users\redra\AppData\Local\alire\cache\builds\bare_runtime_14.0.0_095db6f0\282b01b920f0d5bb2bac604ac6d9e811f26d175144bc99af963e0381e797ee94\
+A -gnatA
+A -gnatWb
+A -gnatiw
+A -gnatws
+A -mabi=ilp32
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -misa-spec=20191213
+A -march=rv32i_zicsr_zifencei
+P ZX
+
+RN
+RR NO_EXCEPTION_PROPAGATION
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+RV NO_OBSOLESCENT_FEATURES
+
+U ada_main%b		b__npu_layer_worst_case_timings.adb  dfca0397 OO PK IL
+Z system%s		system.ads		system.ali
+
+U ada_main%s		b__npu_layer_worst_case_timings.ads  cde87ccc EE NE OO PK IL
+W system%s		system.ads		system.ali
+W system.parameters%s	s-parame.ads		s-parame.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+D b__npu_layer_worst_case_timings.ads  20260405191802 59e48003 ada_main%s
+D b__npu_layer_worst_case_timings.adb  20260405191802 862e8394 ada_main%b
+D system.ads		20260405191746 28e4acdd system%s
+D s-parame.ads		20260405191746 01611d59 system.parameters%s
+D s-secsta.ads		20260405191746 bd894d4b system.secondary_stack%s
+D s-stoele.ads		20260405191746 ccded4e8 system.storage_elements%s
+G a e
+G c Z s b [adainit ada_main 20 14 none]
+G c Z s b [main ada_main 23 14 none]
+X 1 b__npu_layer_worst_case_timings.ads
+7K9*ada_main 95l5 95e13 2|7b14 89l5 89t13
+10a4*GNAT_Version{string} 12r22 14r54
+14m4*GNAT_Version_Address{3|85M9} 15r22
+17a4*Ada_Main_Program_Name{string} 18r22 2|68r52
+20U14*adainit 21i<c,adainit>22 2|27b14 62l8 62t15 72s7
+23U14*main 24i<c,main>22 2|67b14 74t7
+X 2 b__npu_layer_worst_case_timings.adb
+9i4 E23{short_integer} 9m45 9r45 46m7 46r14
+10i4 E10{short_integer} 10m45 10r45 48m7 48r14
+11i4 E27{short_integer} 11m45 11r45 49m7 49r14
+12i4 E50{short_integer} 12m45 12r45 50m7 50r14
+13i4 E39{short_integer} 13m45 13r45 51m7 51r14
+14i4 E54{short_integer} 14m45 14r45 53m7 53r14
+15i4 E52{short_integer} 15m45 15r45 54m7 54r14
+16i4 E42{short_integer} 16m45 16r45 55m7 55r14
+17i4 E30{short_integer} 17m45 17r45 56m7 56r14
+18i4 E57{short_integer} 18m45 18r45 57m7 57r14
+19i4 E60{short_integer} 19m45 19r45 58m7 58r14
+20i4 E62{short_integer} 20m45 20r45 59m7 59r14
+21i4 E64{short_integer} 21m45 21r45 60m7 60r14
+22i4 E66{short_integer} 22m45 22r45 61m7 61r14
+24a4 Sec_Default_Sized_Stacks(5|43R9) 42m32 42r32
+28i7*Binder_Sec_Stacks_Count{natural} 29m27 29r27 41m7
+31i7*Default_Secondary_Stack_Size{4|56I9} 32m25 32r25 40m7
+33m7*Default_Sized_SS_Pool{3|85M9} 34m27 34r27 42m7
+64U14 Ada_Main_Program 65b<ada,_ada_npu_layer_worst_case_timings>24 73s7
+68m7 Ensure_Reference{3|85M9} 69r24
+X 3 system.ads
+55K9*System 1|4w6 5r6 6r6 14r36 2|24r57 24r90 31r38 33r31 40r39 68r34 3|169e11
+85M9*Address 1|14r43 2|33r38 68r41
+X 4 s-parame.ads
+49K16*Parameters 1|5w13 2|24r97 31r45 40r46 4|91e22
+56I9*Size_Type<integer> 2|31r56
+66i4*Runtime_Default_Sec_Stack_Size{56I9} 2|24r108 40r57
+X 5 s-secsta.ads
+37K16*Secondary_Stack 1|6w13 2|24r64 5|159e27
+43R9*SS_Stack 2|24r80 5|123e14
+

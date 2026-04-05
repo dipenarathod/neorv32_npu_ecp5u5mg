@@ -1,0 +1,88 @@
+V "GNAT Lib v14"
+A -O3
+A -O3
+A -gnatA
+A --RTS=C:\Users\redra\AppData\Local\alire\cache\builds\bare_runtime_14.0.0_095db6f0\282b01b920f0d5bb2bac604ac6d9e811f26d175144bc99af963e0381e797ee94\
+A -mabi=ilp32
+A -gnatn
+A -ffunction-sections
+A -fdata-sections
+A -gnatW8
+A -gnat2022
+A -gnatn
+A -misa-spec=20191213
+A -march=rv32i_zicsr_zifencei
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U wb_npu_helper.conv2d%b  wb_npu_helper-conv2d.adb  2bb501a1 NE OO PK
+W wb_npu_address_map%s	wb_npu_address_map.ads	wb_npu_address_map.ali
+W wb_npu_helper%s	wb_npu_helper.adb	wb_npu_helper.ali
+
+U wb_npu_helper.conv2d%s  wb_npu_helper-conv2d.ads  3dc2b81b BN EE NE OO PK
+W wb_npu_helper%s	wb_npu_helper.adb	wb_npu_helper.ali
+
+D ada.ads		20260405191740 76789da1 ada%s
+D a-textio.ads		20260405191740 6c013a58 ada.text_io%s
+D input_output_helper.ads  20260405190546 e32e24f3 input_output_helper%s
+D input_output_helper.adb  20260405190546 54564662 input_output_helper%b
+D interfac.ads		20260405191740 9111f9c1 interfaces%s
+D system.ads		20260405191746 28e4acdd system%s
+D s-atacco.ads		20260405191740 5868e3ba system.address_to_access_conversions%s
+D s-stoele.ads		20260405191746 ccded4e8 system.storage_elements%s
+D wb_npu_address_map.ads  20260402200148 7efd4215 wb_npu_address_map%s
+D wb_npu_helper.ads	20260402200148 2fb2b504 wb_npu_helper%s
+D wb_npu_helper.adb	20260402200148 760649ee wb_npu_helper%b
+D wb_npu_helper-conv2d.ads  20260402200148 12700d1f wb_npu_helper.conv2d%s
+D wb_npu_helper-conv2d.adb  20260402200148 47384eab wb_npu_helper.conv2d%b
+G a e
+G c Z s b [apply_conv2d_all_words wb_npu_helper__conv2d 3 14 none]
+G r c none [apply_conv2d_all_words wb_npu_helper__conv2d 3 14 none] [set_dim wb_npu_helper 35 14 none]
+G r c none [apply_conv2d_all_words wb_npu_helper__conv2d 3 14 none] [set_n_inputs wb_npu_helper 48 14 none]
+G r c none [apply_conv2d_all_words wb_npu_helper__conv2d 3 14 none] [set_n_outputs wb_npu_helper 60 14 none]
+G r c none [apply_conv2d_all_words wb_npu_helper__conv2d 3 14 none] [set_weight_base_index wb_npu_helper 42 14 none]
+G r c none [apply_conv2d_all_words wb_npu_helper__conv2d 3 14 none] [set_bias_base_index wb_npu_helper 45 14 none]
+G r c none [apply_conv2d_all_words wb_npu_helper__conv2d 3 14 none] [set_zero_point wb_npu_helper 53 14 none]
+G r c none [apply_conv2d_all_words wb_npu_helper__conv2d 3 14 none] [set_quantized_multiplier_register wb_npu_helper 55 14 none]
+G r c none [apply_conv2d_all_words wb_npu_helper__conv2d 3 14 none] [set_quantized_multiplier_right_shift_register wb_npu_helper 57 14 none]
+G r c none [apply_conv2d_all_words wb_npu_helper__conv2d 3 14 none] [set_word_index wb_npu_helper 38 14 none]
+G r c none [apply_conv2d_all_words wb_npu_helper__conv2d 3 14 none] [set_out_index wb_npu_helper 37 14 none]
+G r c none [apply_conv2d_all_words wb_npu_helper__conv2d 3 14 none] [perform_conv2d wb_npu_helper 72 14 none]
+G r c none [apply_conv2d_all_words wb_npu_helper__conv2d 3 14 none] [wait_while_busy wb_npu_helper 77 14 none]
+G r c none [apply_conv2d_all_words wb_npu_helper__conv2d 3 14 none] [write_reg input_output_helper 46 14 none]
+X 3 input_output_helper.ads
+46U14*Write_Reg 13|28s4
+X 6 system.ads
+85M9*Address
+X 9 wb_npu_address_map.ads
+2K9*wb_npu_address_map 70e23 13|1w6 1r30
+6m4*CTRL_Addr{6|85M9} 13|28r15
+X 10 wb_npu_helper.ads
+6K9*Wb_Npu_Helper 164e18 12|1r9 15r5 13|3r14 31r5
+35U14*Set_Dim 13|16s4
+37U14*Set_Out_Index 13|25s4
+38U14*Set_Word_Index 13|24s4
+42U14*Set_Weight_Base_Index 13|19s4
+45U14*Set_Bias_Base_Index 13|20s4
+48U14*Set_N_Inputs 13|17s4
+53U14*Set_Zero_Point 13|21s4
+55U14*Set_Quantized_Multiplier_Register 13|22s4
+57U14*Set_Quantized_Multiplier_Right_Shift_Register 13|23s4
+60U14*Set_N_Outputs 13|18s4
+72U14*Perform_Conv2D 13|26s4
+77U14*Wait_While_Busy 13|27s4
+X 12 wb_npu_helper-conv2d.ads
+1K23*Conv2D 10|6k9 12|15l19 15e25 13|3b28 31l19 31t25
+3U14*Apply_Conv2D_All_Words 4>7 5>7 6>7 7>7 8>7 9>7 10>7 11>7 13r19 13|5b11
+. 29l5 29t27
+4i7 N{natural} 13|6b4 16r13
+5i7 Input_Channels{natural} 13|7b4 17r18
+6i7 Filters{natural} 13|8b4 18r19
+7i7 Weight_Base_Index{natural} 13|9b4 19r27
+8i7 Bias_Base_Index{natural} 13|10b4 20r25
+9i7 Zero_Point{integer} 13|11b4 21r20
+10i7 Quantized_Multiplier{integer} 13|12b4 22r39
+11i7 Quantized_Multiplier_Right_Shift{natural} 13|13b4 23r51
+

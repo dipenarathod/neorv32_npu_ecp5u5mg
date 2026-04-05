@@ -1,0 +1,19 @@
+[LIBRARY PATH]
+C:\Users\redra\OneDrive\Desktop\repos\neorv32_basys3_scripts_and_steps\Ada-Files\NPU-Library\wb_npu_helper\lib\libWb_Npu_Helper.a
+[OBJECT FILES]
+C:\Users\redra\OneDrive\Desktop\repos\neorv32_basys3_scripts_and_steps\Ada-Files\NPU-Library\wb_npu_helper\obj\release\wb_npu_address_map.o
+20260405191752
+C:\Users\redra\OneDrive\Desktop\repos\neorv32_basys3_scripts_and_steps\Ada-Files\NPU-Library\wb_npu_helper\obj\release\wb_npu_helper-activation.o
+20260405191752
+C:\Users\redra\OneDrive\Desktop\repos\neorv32_basys3_scripts_and_steps\Ada-Files\NPU-Library\wb_npu_helper\obj\release\wb_npu_helper-conv2d.o
+20260405191752
+C:\Users\redra\OneDrive\Desktop\repos\neorv32_basys3_scripts_and_steps\Ada-Files\NPU-Library\wb_npu_helper\obj\release\wb_npu_helper-debug.o
+20260405191752
+C:\Users\redra\OneDrive\Desktop\repos\neorv32_basys3_scripts_and_steps\Ada-Files\NPU-Library\wb_npu_helper\obj\release\wb_npu_helper-dense.o
+20260405191752
+C:\Users\redra\OneDrive\Desktop\repos\neorv32_basys3_scripts_and_steps\Ada-Files\NPU-Library\wb_npu_helper\obj\release\wb_npu_helper-pooling.o
+20260405191752
+C:\Users\redra\OneDrive\Desktop\repos\neorv32_basys3_scripts_and_steps\Ada-Files\NPU-Library\wb_npu_helper\obj\release\wb_npu_helper.o
+20260405191752
+C:\Users\redra\OneDrive\Desktop\repos\neorv32_basys3_scripts_and_steps\Ada-Files\NPU-Library\wb_npu_helper\obj\release\wb_npu_helper_config.o
+20260405191752

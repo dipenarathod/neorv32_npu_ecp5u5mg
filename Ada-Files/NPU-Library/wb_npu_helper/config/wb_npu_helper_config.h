@@ -5,11 +5,11 @@
 #define CRATE_VERSION "0.1.0-dev"
 #define CRATE_NAME "wb_npu_helper"
 
-#define ALIRE_HOST_OS "linux"
+#define ALIRE_HOST_OS "windows"
 
 #define ALIRE_HOST_ARCH "x86_64"
 
-#define ALIRE_HOST_DISTRO "ubuntu"
+#define ALIRE_HOST_DISTRO "msys2"
 
 #define BUILD_PROFILE_RELEASE 1
 #define BUILD_PROFILE_VALIDATION 2

@@ -1,0 +1,8 @@
+dependency:bare_runtime=14.0.0=282b01b920f0d5bb2bac604ac6d9e811f26d175144bc99af963e0381e797ee94
+dependency:input_output_helper=0.1.0-dev=b2de97c03df297b607e5c8ed4e0703c4bbcee6383c619f877deedab46232800b
+dependency:neorv32_hal=0.1.0-dev=d36e1db83406462dbc11cde4b1e27b79c2272ed906d51adb47d890d471eaff39
+dependency:wb_npu_helper=0.1.0-dev=e6d55054a15eb42d434a8f9a1577f56c47a5d74f3365efcd2478e0d27e5d4f22
+external:LIBRARY_TYPE=default
+external:NPU_LAYER_WORST_CASE_TIMINGS_LIBRARY_TYPE=default
+profile:npu_layer_worst_case_timings=DEVELOPMENT
+switches:npu_layer_worst_case_timings=-Og,-fdata-sections,-ffunction-sections,-g,-gnatVa,-gnatW8,-gnatw.X,-gnatwa,-gnaty-d,-gnaty3,-gnatyA,-gnatyB,-gnatyI,-gnatyO,-gnatyS,-gnatya,-gnatyb,-gnatyc,-gnatye,-gnatyf,-gnatyh,-gnatyi,-gnatyk,-gnatyl,-gnatym,-gnatyn,-gnatyp,-gnatyr,-gnatyt,-gnatyu,-gnatyx

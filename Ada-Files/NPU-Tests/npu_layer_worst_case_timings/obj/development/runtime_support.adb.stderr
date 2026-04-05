@@ -1,0 +1,2 @@
+runtime_support.ads:1:06: warning: no entities of "Interrupts" are referenced [-gnatwu]
+runtime_support.ads:1:18: warning: use clause for package "Interrupts" has no effect [-gnatwu]

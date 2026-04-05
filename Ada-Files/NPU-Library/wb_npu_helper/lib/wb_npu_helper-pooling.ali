@@ -1,0 +1,112 @@
+V "GNAT Lib v14"
+A -O3
+A -O3
+A -gnatA
+A --RTS=C:\Users\redra\AppData\Local\alire\cache\builds\bare_runtime_14.0.0_095db6f0\282b01b920f0d5bb2bac604ac6d9e811f26d175144bc99af963e0381e797ee94\
+A -mabi=ilp32
+A -gnatn
+A -ffunction-sections
+A -fdata-sections
+A -gnatW8
+A -gnat2022
+A -gnatn
+A -misa-spec=20191213
+A -march=rv32i_zicsr_zifencei
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U wb_npu_helper.pooling%b  wb_npu_helper-pooling.adb  c6527f44 NE OO PK
+W wb_npu_address_map%s	wb_npu_address_map.ads	wb_npu_address_map.ali
+W wb_npu_helper%s	wb_npu_helper.adb	wb_npu_helper.ali
+
+U wb_npu_helper.pooling%s  wb_npu_helper-pooling.ads  c6927c63 BN EE NE OO PK
+W wb_npu_helper%s	wb_npu_helper.adb	wb_npu_helper.ali
+
+D ada.ads		20260405191740 76789da1 ada%s
+D a-textio.ads		20260405191740 6c013a58 ada.text_io%s
+D input_output_helper.ads  20260405190546 e32e24f3 input_output_helper%s
+D input_output_helper.adb  20260405190546 54564662 input_output_helper%b
+D interfac.ads		20260405191740 9111f9c1 interfaces%s
+D system.ads		20260405191746 28e4acdd system%s
+D s-atacco.ads		20260405191740 5868e3ba system.address_to_access_conversions%s
+D s-stoele.ads		20260405191746 ccded4e8 system.storage_elements%s
+D wb_npu_address_map.ads  20260402200148 7efd4215 wb_npu_address_map%s
+D wb_npu_helper.ads	20260402200148 2fb2b504 wb_npu_helper%s
+D wb_npu_helper.adb	20260402200148 760649ee wb_npu_helper%b
+D wb_npu_helper-pooling.ads  20260402200148 e920c967 wb_npu_helper.pooling%s
+D wb_npu_helper-pooling.adb  20260402200148 518ff436 wb_npu_helper.pooling%b
+G a e
+G c Z s b [apply_maxpool_2x2_all_words wb_npu_helper__pooling 5 14 none]
+G c Z s b [apply_avgpool_2x2_all_words wb_npu_helper__pooling 7 14 none]
+G c Z s b [apply_maxpool_multi_channel wb_npu_helper__pooling 9 14 none]
+G c Z s b [apply_avgpool_multi_channel wb_npu_helper__pooling 10 14 none]
+G r c none [apply_maxpool_2x2_all_words wb_npu_helper__pooling 5 14 none] [set_dim wb_npu_helper 35 14 none]
+G r c none [apply_maxpool_2x2_all_words wb_npu_helper__pooling 5 14 none] [set_pool_base_index wb_npu_helper 36 14 none]
+G r c none [apply_maxpool_2x2_all_words wb_npu_helper__pooling 5 14 none] [set_out_index wb_npu_helper 37 14 none]
+G r c none [apply_maxpool_2x2_all_words wb_npu_helper__pooling 5 14 none] [perform_max_pool wb_npu_helper 66 14 none]
+G r c none [apply_maxpool_2x2_all_words wb_npu_helper__pooling 5 14 none] [wait_while_busy wb_npu_helper 77 14 none]
+G r c none [apply_maxpool_2x2_all_words wb_npu_helper__pooling 5 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [apply_avgpool_2x2_all_words wb_npu_helper__pooling 7 14 none] [set_dim wb_npu_helper 35 14 none]
+G r c none [apply_avgpool_2x2_all_words wb_npu_helper__pooling 7 14 none] [set_pool_base_index wb_npu_helper 36 14 none]
+G r c none [apply_avgpool_2x2_all_words wb_npu_helper__pooling 7 14 none] [set_out_index wb_npu_helper 37 14 none]
+G r c none [apply_avgpool_2x2_all_words wb_npu_helper__pooling 7 14 none] [perform_avg_pool wb_npu_helper 67 14 none]
+G r c none [apply_avgpool_2x2_all_words wb_npu_helper__pooling 7 14 none] [wait_while_busy wb_npu_helper 77 14 none]
+G r c none [apply_avgpool_2x2_all_words wb_npu_helper__pooling 7 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [apply_maxpool_multi_channel wb_npu_helper__pooling 9 14 none] [set_dim wb_npu_helper 35 14 none]
+G r c none [apply_maxpool_multi_channel wb_npu_helper__pooling 9 14 none] [set_pool_base_index wb_npu_helper 36 14 none]
+G r c none [apply_maxpool_multi_channel wb_npu_helper__pooling 9 14 none] [set_out_index wb_npu_helper 37 14 none]
+G r c none [apply_maxpool_multi_channel wb_npu_helper__pooling 9 14 none] [perform_max_pool wb_npu_helper 66 14 none]
+G r c none [apply_maxpool_multi_channel wb_npu_helper__pooling 9 14 none] [wait_while_busy wb_npu_helper 77 14 none]
+G r c none [apply_maxpool_multi_channel wb_npu_helper__pooling 9 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [apply_avgpool_multi_channel wb_npu_helper__pooling 10 14 none] [set_dim wb_npu_helper 35 14 none]
+G r c none [apply_avgpool_multi_channel wb_npu_helper__pooling 10 14 none] [set_pool_base_index wb_npu_helper 36 14 none]
+G r c none [apply_avgpool_multi_channel wb_npu_helper__pooling 10 14 none] [set_out_index wb_npu_helper 37 14 none]
+G r c none [apply_avgpool_multi_channel wb_npu_helper__pooling 10 14 none] [perform_avg_pool wb_npu_helper 67 14 none]
+G r c none [apply_avgpool_multi_channel wb_npu_helper__pooling 10 14 none] [wait_while_busy wb_npu_helper 77 14 none]
+G r c none [apply_avgpool_multi_channel wb_npu_helper__pooling 10 14 none] [write_reg input_output_helper 46 14 none]
+X 3 input_output_helper.ads
+46U14*Write_Reg 13|16s7 31s7
+X 6 system.ads
+85M9*Address
+X 9 wb_npu_address_map.ads
+2K9*wb_npu_address_map 70e23 13|1w6 1r30
+6m4*CTRL_Addr{6|85M9} 13|16r18 31r18
+X 10 wb_npu_helper.ads
+6K9*Wb_Npu_Helper 164e18 12|1r9 16r5 13|2r14 61r5
+35U14*Set_Dim 13|11s7 26s7
+36U14*Set_Pool_Base_Index 13|12s7 27s7
+37U14*Set_Out_Index 13|13s7 28s7
+66U14*Perform_Max_Pool 13|14s7
+67U14*Perform_Avg_Pool 13|29s7
+77U14*Wait_While_Busy 13|15s7 30s7
+X 12 wb_npu_helper-pooling.ads
+1K23*pooling 10|6k9 12|16l19 16e26 13|2b28 61l19 61t26
+5U14*Apply_MaxPool_2x2_All_Words 6>7 6>20 6>41 12r19 13|6b14 17l8 17t35 57s10
+6i7 N{natural} 13|7b7 9r35 11r16
+6i20 Base{natural} 13|7b20 12r28
+6i41 Out_Index{natural} 13|7b41 13r22
+7U14*Apply_AvgPool_2x2_All_words 8>7 8>20 8>41 13r19 13|21b14 33l8 33t35
+. 44s10
+8i7 N{natural} 13|22b7 24r35 26r16
+8i20 Base{natural} 13|22b20 27r28
+8i41 Out_Index{natural} 13|22b41 28r22
+9U14*Apply_MaxPool_Multi_Channel 9>43 9>56 14r19 13|48b14 59l8 59t35
+9i43 N{natural} 13|49b7 51r46 52r46 52r50 57r38
+9i56 Number_Of_Output_Channels{natural} 13|49b20 56r21
+10U14*Apply_AvgPool_Multi_Channel 10>43 10>56 15r19 13|35b14 46l8 46t35
+10i43 N{natural} 13|36b7 38r46 39r46 39r50 44r38
+10i56 Number_Of_Output_Channels{natural} 13|36b20 43r21
+X 13 wb_npu_helper-pooling.adb
+9i7 Out_N{natural}
+24i7 Out_N{natural}
+38i7 Out_N{natural} 40r46 40r54
+39i7 In_Channel_Size{natural} 44r45
+40i7 Out_Channel_Size{natural} 44r66
+43i11 i{integer} 44r41 44r62
+51i7 Out_N{natural} 53r46 53r54
+52i7 In_Channel_Size{natural} 57r45
+53i7 Out_Channel_Size{natural} 57r66
+56i11 i{integer} 57r41 57r62
+

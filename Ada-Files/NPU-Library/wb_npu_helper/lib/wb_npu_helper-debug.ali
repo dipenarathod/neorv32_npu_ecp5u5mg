@@ -1,0 +1,93 @@
+V "GNAT Lib v14"
+A -O3
+A -O3
+A -gnatA
+A --RTS=C:\Users\redra\AppData\Local\alire\cache\builds\bare_runtime_14.0.0_095db6f0\282b01b920f0d5bb2bac604ac6d9e811f26d175144bc99af963e0381e797ee94\
+A -mabi=ilp32
+A -gnatn
+A -ffunction-sections
+A -fdata-sections
+A -gnatW8
+A -gnat2022
+A -gnatn
+A -misa-spec=20191213
+A -march=rv32i_zicsr_zifencei
+P ZX
+
+RN
+RV NO_IO
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U wb_npu_helper.debug%b	wb_npu_helper-debug.adb	e6889cac NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W interfaces%s		interfac.ads		interfac.ali
+Z system.img_uns%s	s-imguns.ads		s-imguns.ali
+Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+W wb_npu_address_map%s	wb_npu_address_map.ads	wb_npu_address_map.ali
+W wb_npu_helper%s	wb_npu_helper.adb	wb_npu_helper.ali
+
+U wb_npu_helper.debug%s	wb_npu_helper-debug.ads	493c6f2c EE NE OO PK
+W wb_npu_helper%s	wb_npu_helper.adb	wb_npu_helper.ali
+
+D ada.ads		20260405191740 76789da1 ada%s
+D a-assert.ads		20260405191740 ba465f5c ada.assertions%s
+D a-except.ads		20260405191740 5b5f0f2f ada.exceptions%s
+D a-numeri.ads		20260405191740 84bea7a3 ada.numerics%s
+D a-nubinu.ads		20260405191740 93f1f3d1 ada.numerics.big_numbers%s
+D a-nbnbig.ads		20260405191740 31ff4aa1 ada.numerics.big_numbers.big_integers_ghost%s
+D a-textio.ads		20260405191740 6c013a58 ada.text_io%s
+D input_output_helper.ads  20260405190546 e32e24f3 input_output_helper%s
+D input_output_helper.adb  20260405190546 54564662 input_output_helper%b
+D interfac.ads		20260405191740 9111f9c1 interfaces%s
+D system.ads		20260405191746 28e4acdd system%s
+D s-atacco.ads		20260405191740 5868e3ba system.address_to_access_conversions%s
+D s-assert.ads		20260405191740 9c4520c7 system.assertions%s
+D s-imageu.ads		20260405191742 b0b50650 system.image_u%s
+D s-imageu.adb		20260405191742 adcee293 system.image_u%b
+D s-imguns.ads		20260405191742 c4e23690 system.img_uns%s
+D s-stoele.ads		20260405191746 ccded4e8 system.storage_elements%s
+D s-unstyp.ads		20260405191746 fa2a7f59 system.unsigned_types%s
+D s-valspe.ads		20260405191746 b0fcd073 system.val_spec%s
+D s-vauspe.ads		20260405191746 89269ba5 system.value_u_spec%s
+D s-vauspe.adb		20260405191746 8524adb4 system.value_u_spec%b
+D s-vs_uns.ads		20260405191746 e7f47a27 system.vs_uns%s
+D wb_npu_address_map.ads  20260402200148 7efd4215 wb_npu_address_map%s
+D wb_npu_helper.ads	20260402200148 2fb2b504 wb_npu_helper%s
+D wb_npu_helper-debug.ads  20260402200148 668eda28 wb_npu_helper.debug%s
+D wb_npu_helper-debug.adb  20260402200148 03ebc708 wb_npu_helper.debug%b
+G a e
+G c Z s b [print_registers wb_npu_helper__debug 3 14 none]
+G r c none [print_registers wb_npu_helper__debug 3 14 none] [read_reg input_output_helper 49 13 none]
+X 1 ada.ads
+16K9*Ada 20e8 26|1r6 1r23
+X 7 a-textio.ads
+36K13*Text_IO 62e16 26|1w10 1r27
+50U14*Put 26|15s7 16s7 19s7 20s7 23s7 24s7 27s7 28s7
+58U14*New_Line 26|17s7 21s7 25s7 29s7
+X 8 input_output_helper.ads
+14M12*Word{10|81M9} 26|10r29 11r29 12r29 13r29 16r12 16r24 20r12 20r24 24r12
+. 24r24 28r12 28r24
+49V13*Read_Reg{14M12} 26|10s37 11s37 12s37 13s37
+X 10 interfac.ads
+38K9*Interfaces 233e15 26|2w6 2r22
+81M9*Unsigned_32
+X 11 system.ads
+85M9*Address
+X 23 wb_npu_address_map.ads
+2K9*wb_npu_address_map 70e23 26|3w6 3r30
+6m4*CTRL_Addr{11|85M9} 26|10r47
+9m4*STATUS_Addr{11|85M9} 26|11r47
+12m4*DIM_Addr{11|85M9} 26|12r47
+19m4*WORDI_Addr{11|85M9} 26|13r47
+X 24 wb_npu_helper.ads
+6K9*Wb_Npu_Helper 164e18 25|1r9 5r5 26|4r14 33r5
+X 25 wb_npu_helper-debug.ads
+1K23*Debug 24|6k9 25|5l19 5e24 26|4b28 33l19 33t24
+3U14*Print_Registers 26|9b14 30l8 30t23
+X 26 wb_npu_helper-debug.adb
+10m7 CTRL_Val{8|14M12} 16r30
+11m7 STATUS_Val{8|14M12} 20r30
+12m7 DIM_Val{8|14M12} 24r30
+13m7 WORDI_Val{8|14M12} 28r30
+

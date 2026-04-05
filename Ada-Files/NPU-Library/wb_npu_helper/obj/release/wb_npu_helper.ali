@@ -1,0 +1,315 @@
+V "GNAT Lib v14"
+A -O3
+A -O3
+A -gnatA
+A --RTS=C:\Users\redra\AppData\Local\alire\cache\builds\bare_runtime_14.0.0_095db6f0\282b01b920f0d5bb2bac604ac6d9e811f26d175144bc99af963e0381e797ee94\
+A -mabi=ilp32
+A -gnatn
+A -ffunction-sections
+A -fdata-sections
+A -gnatW8
+A -gnat2022
+A -gnatn
+A -misa-spec=20191213
+A -march=rv32i_zicsr_zifencei
+P ZX
+
+RN
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U wb_npu_helper%b	wb_npu_helper.adb	22ee706c NE OO PK
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.address_to_access_conversions%s
+W system.storage_elements%s  s-stoele.ads	s-stoele.ali
+W wb_npu_address_map%s	wb_npu_address_map.ads	wb_npu_address_map.ali
+
+U wb_npu_helper%s	wb_npu_helper.ads	9647e018 BN EE NE OO PK
+W input_output_helper%s	input_output_helper.adb	input_output_helper.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+
+D ada.ads		20260405191740 76789da1 ada%s
+D a-textio.ads		20260405191740 6c013a58 ada.text_io%s
+D input_output_helper.ads  20260405190546 e32e24f3 input_output_helper%s
+D input_output_helper.adb  20260405190546 54564662 input_output_helper%b
+D interfac.ads		20260405191740 9111f9c1 interfaces%s
+D system.ads		20260405191746 28e4acdd system%s
+D s-atacco.ads		20260405191740 5868e3ba system.address_to_access_conversions%s
+D s-stoele.ads		20260405191746 ccded4e8 system.storage_elements%s
+D wb_npu_address_map.ads  20260402200148 7efd4215 wb_npu_address_map%s
+D wb_npu_helper.ads	20260402200148 2fb2b504 wb_npu_helper%s
+D wb_npu_helper.adb	20260402200148 760649ee wb_npu_helper%b
+G a e
+G c Z s b [set_dim wb_npu_helper 35 14 none]
+G c Z s b [set_pool_base_index wb_npu_helper 36 14 none]
+G c Z s b [set_out_index wb_npu_helper 37 14 none]
+G c Z s b [set_word_index wb_npu_helper 38 14 none]
+G c Z s b [set_softmax_mode wb_npu_helper 39 14 none]
+G c Z s b [set_sum_param wb_npu_helper 40 14 none]
+G c Z s b [set_weight_base_index wb_npu_helper 42 14 none]
+G c Z s b [set_bias_base_index wb_npu_helper 45 14 none]
+G c Z s b [set_n_inputs wb_npu_helper 48 14 none]
+G c Z s b [set_zero_point wb_npu_helper 53 14 none]
+G c Z s b [set_quantized_multiplier_register wb_npu_helper 55 14 none]
+G c Z s b [set_quantized_multiplier_right_shift_register wb_npu_helper 57 14 none]
+G c Z s b [set_n_outputs wb_npu_helper 60 14 none]
+G c Z s b [set_words_to_copy_from_r_to_a wb_npu_helper 62 14 none]
+G c Z s b [perform_op wb_npu_helper 65 14 none]
+G c Z s b [perform_max_pool wb_npu_helper 66 14 none]
+G c Z s b [perform_avg_pool wb_npu_helper 67 14 none]
+G c Z s b [perform_sigmoid wb_npu_helper 68 14 none]
+G c Z s b [perform_relu wb_npu_helper 69 14 none]
+G c Z s b [perform_softmax wb_npu_helper 70 14 none]
+G c Z s b [perform_dense wb_npu_helper 71 14 none]
+G c Z s b [perform_conv2d wb_npu_helper 72 14 none]
+G c Z s b [perform_copy_r_to_a wb_npu_helper 73 14 none]
+G c Z s b [is_busy wb_npu_helper 75 13 none]
+G c Z s b [is_done wb_npu_helper 76 13 none]
+G c Z s b [wait_while_busy wb_npu_helper 77 14 none]
+G c Z s b [write_word_in_a wb_npu_helper 80 14 none]
+G c Z s b [write_words_in_a wb_npu_helper 81 14 none]
+G c Z s b [read_word_from_a wb_npu_helper 84 13 none]
+G c Z s b [read_words_from_a wb_npu_helper 85 14 none]
+G c Z s b [write_word_in_b wb_npu_helper 88 14 none]
+G c Z s b [write_words_in_b wb_npu_helper 89 14 none]
+G c Z s b [read_word_from_b wb_npu_helper 92 13 none]
+G c Z s b [read_words_from_b wb_npu_helper 93 14 none]
+G c Z s b [write_word_in_c wb_npu_helper 96 14 none]
+G c Z s b [write_words_in_c wb_npu_helper 97 14 none]
+G c Z s b [read_word_from_c wb_npu_helper 100 13 none]
+G c Z s b [read_words_from_c wb_npu_helper 101 14 none]
+G c Z s b [read_word_from_r wb_npu_helper 104 13 none]
+G c Z s b [read_words_from_r wb_npu_helper 105 14 none]
+G c Z s b [copy_result_to_input wb_npu_helper 108 14 none]
+G r c none [set_dim wb_npu_helper 35 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [set_pool_base_index wb_npu_helper 36 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [set_out_index wb_npu_helper 37 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [set_word_index wb_npu_helper 38 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [set_softmax_mode wb_npu_helper 39 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [set_sum_param wb_npu_helper 40 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [set_weight_base_index wb_npu_helper 42 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [set_bias_base_index wb_npu_helper 45 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [set_n_inputs wb_npu_helper 48 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [set_zero_point wb_npu_helper 53 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [set_quantized_multiplier_register wb_npu_helper 55 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [set_quantized_multiplier_right_shift_register wb_npu_helper 57 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [set_n_outputs wb_npu_helper 60 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [set_words_to_copy_from_r_to_a wb_npu_helper 62 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [perform_op wb_npu_helper 65 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [perform_max_pool wb_npu_helper 66 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [perform_avg_pool wb_npu_helper 67 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [perform_sigmoid wb_npu_helper 68 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [perform_relu wb_npu_helper 69 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [perform_softmax wb_npu_helper 70 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [perform_dense wb_npu_helper 71 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [perform_conv2d wb_npu_helper 72 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [perform_copy_r_to_a wb_npu_helper 73 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [is_busy wb_npu_helper 75 13 none] [read_reg input_output_helper 49 13 none]
+G r c none [is_done wb_npu_helper 76 13 none] [read_reg input_output_helper 49 13 none]
+G r c none [wait_while_busy wb_npu_helper 77 14 none] [read_reg input_output_helper 49 13 none]
+G r c none [write_word_in_a wb_npu_helper 80 14 none] [add_byte_offset input_output_helper 42 13 none]
+G r c none [write_word_in_a wb_npu_helper 80 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [write_words_in_a wb_npu_helper 81 14 none] [add_byte_offset input_output_helper 42 13 none]
+G r c none [write_words_in_a wb_npu_helper 81 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [read_word_from_a wb_npu_helper 84 13 none] [add_byte_offset input_output_helper 42 13 none]
+G r c none [read_word_from_a wb_npu_helper 84 13 none] [read_reg input_output_helper 49 13 none]
+G r c none [read_words_from_a wb_npu_helper 85 14 none] [add_byte_offset input_output_helper 42 13 none]
+G r c none [read_words_from_a wb_npu_helper 85 14 none] [read_reg input_output_helper 49 13 none]
+G r c none [write_word_in_b wb_npu_helper 88 14 none] [add_byte_offset input_output_helper 42 13 none]
+G r c none [write_word_in_b wb_npu_helper 88 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [write_words_in_b wb_npu_helper 89 14 none] [add_byte_offset input_output_helper 42 13 none]
+G r c none [write_words_in_b wb_npu_helper 89 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [read_word_from_b wb_npu_helper 92 13 none] [add_byte_offset input_output_helper 42 13 none]
+G r c none [read_word_from_b wb_npu_helper 92 13 none] [read_reg input_output_helper 49 13 none]
+G r c none [read_words_from_b wb_npu_helper 93 14 none] [add_byte_offset input_output_helper 42 13 none]
+G r c none [read_words_from_b wb_npu_helper 93 14 none] [read_reg input_output_helper 49 13 none]
+G r c none [write_word_in_c wb_npu_helper 96 14 none] [add_byte_offset input_output_helper 42 13 none]
+G r c none [write_word_in_c wb_npu_helper 96 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [write_words_in_c wb_npu_helper 97 14 none] [add_byte_offset input_output_helper 42 13 none]
+G r c none [write_words_in_c wb_npu_helper 97 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [read_word_from_c wb_npu_helper 100 13 none] [add_byte_offset input_output_helper 42 13 none]
+G r c none [read_word_from_c wb_npu_helper 100 13 none] [read_reg input_output_helper 49 13 none]
+G r c none [read_words_from_c wb_npu_helper 101 14 none] [add_byte_offset input_output_helper 42 13 none]
+G r c none [read_words_from_c wb_npu_helper 101 14 none] [read_reg input_output_helper 49 13 none]
+G r c none [read_word_from_r wb_npu_helper 104 13 none] [add_byte_offset input_output_helper 42 13 none]
+G r c none [read_word_from_r wb_npu_helper 104 13 none] [read_reg input_output_helper 49 13 none]
+G r c none [read_words_from_r wb_npu_helper 105 14 none] [add_byte_offset input_output_helper 42 13 none]
+G r c none [read_words_from_r wb_npu_helper 105 14 none] [read_reg input_output_helper 49 13 none]
+G r c none [copy_result_to_input wb_npu_helper 108 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [copy_result_to_input wb_npu_helper 108 14 none] [read_reg input_output_helper 49 13 none]
+X 3 input_output_helper.ads
+6K9*Input_Output_Helper 89e24 10|3w6 3r31 4w6 4r31
+14M12*Word{5|81M9} 10|10r26 11r26 12r26 13r26 14r26 17r34 18r34 19r34 20r34
+. 21r34 24r32 25r32 28r28 31r28 32r28 39r39 41r13 65r35 80r56 84r55 88r56
+. 92r55 96r56 100r55 104r55 11|11r28 17r30 23r29 29r30 33r39 39r35 47r42
+. 53r40 59r33 71r39 78r41 87r10 93r37 100r10 104r35 105r22 106r22 185r56
+. 202r55 220r56 237r55 255r56 272r55 290r55
+21A9*Word_Array(14M12)<integer> 10|82r16 86r18 90r16 94r18 98r16 102r18 106r18
+. 11|192r41 210r18 227r41 245r18 262r41 280r18 298r18
+42V13*Add_Byte_Offset{6|85M9} 11|187s9 204s9 222s9 239s9 257s9 274s9 292s9
+46U14*Write_Reg 11|11s7 17s7 23s7 29s7 35s7 41s7 47s7 53s7 59s7 71s7 77s7
+. 85s7 93s7 98s7 116s7 189s7 224s7 259s7 314s7
+49V13*Read_Reg{14M12} 11|164s15 170s15 206s14 241s14 276s14 294s14
+X 5 interfac.ads
+38K9*Interfaces 233e15 10|1w6 11|3w6 3r23
+81M9*Unsigned_32 11|11r34 17r36 23r35 29r36 47r48 53r46 59r39 71r45 78r47
+. 87r16 93r43 100r16 187r38 204r38 222r38 239r38 257r38 274r38 292r38
+141V13*Shift_Left{81M9} 11|114s14
+X 6 system.ads
+55K9*System 169e11 10|2w6 11|1r6 2r6 186r23 203r23 221r23 238r23 256r23 273r23
+. 291r23
+85M9*Address 11|186r30 203r30 221r30 238r30 256r30 273r30 291r30
+X 7 s-atacco.ads
+39k16*Address_To_Access_Conversions 65e41 11|1w13
+X 8 s-stoele.ads
+40K16*Storage_Elements 90e28 11|2w13
+X 9 wb_npu_address_map.ads
+2K9*wb_npu_address_map 70e23 11|4w6 4r30
+6m4*CTRL_Addr{6|85M9} 11|116r18 314r18
+9m4*STATUS_Addr{6|85M9} 11|164r25 170r25
+12m4*DIM_Addr{6|85M9} 11|11r18
+15m4*BASEI_Addr{6|85M9} 11|17r18
+17m4*OUTI_Addr{6|85M9} 11|23r18
+19m4*WORDI_Addr{6|85M9} 11|29r18
+21m4*SUM_Addr{6|85M9} 11|41r18
+23m4*SOFTMAX_MODE_Addr{6|85M9} 11|35r18
+25m4*WEIGHT_BASE_INDEX_Addr{6|85M9} 11|47r18
+27m4*BIAS_BASE_INDEX_Addr{6|85M9} 11|53r18
+29m4*N_INPUTS_Addr{6|85M9} 11|59r18
+33m4*ZERO_POINT_REG_Addr{6|85M9} 11|71r18
+35m4*QUANTIZED_MULTIPLIER_REG_Addr{6|85M9} 11|78r10
+37m4*QUANTIZED_MULTIPLIER_RIGHT_SHIFT_REG_Addr{6|85M9} 11|86r10
+40m4*N_OUTPUTS_ADDRESS{6|85M9} 11|93r18
+43m4*WORDS_TO_COPY_FROM_R_TO_A_ADDRESS{6|85M9} 11|99r10
+61m4*ABASE_Addr{6|85M9} 11|187r26 204r26
+63m4*BBASE_Addr{6|85M9} 11|222r26 239r26
+65m4*CBASE_Addr{6|85M9} 11|257r26 274r26
+67m4*RBASE_Addr{6|85M9} 11|292r26
+X 10 wb_npu_helper.ads
+6K9*Wb_Npu_Helper 164l5 164e18 11|6b14 317l5 317t18
+10m4*OP_MAX{3|14M12} 11|121r19
+11m4*OP_AVG{3|14M12} 11|126r19
+12m4*OP_SIG{3|14M12} 11|131r19
+13m4*OP_RELU{3|14M12} 11|136r19
+14m4*OP_SOFTMAX{3|14M12} 11|142r19
+17m4*OP_DENSE{3|14M12} 11|147r19
+18m4*OP_CONV2D{3|14M12} 11|152r19
+19m4*OP_COPY_R_TO_A{3|14M12} 11|157r19
+20m4*OP_NOP{3|14M12} 11|111r26
+21m4*MAX_ALLOWED_OPCODE{3|14M12} 11|110r26
+24m4*SOFTMAX_MODE_EXP{3|14M12}
+25m4*SOFTMAX_MODE_DIV{3|14M12}
+28m4*Perform_Bit{3|14M12} 11|114r57
+29i4*Opcode_Shift{natural} 11|114r40
+31m4*Busy_Mask{3|14M12} 11|164r42
+32m4*Done_Mask{3|14M12} 11|170r42
+35U14*Set_Dim 35>23 111r19 11|9b14 12l8 12t15
+35i23 N{natural} 11|9b23 11r47
+36U14*Set_Pool_Base_Index 36>35 112r19 11|15b14 18l8 18t27
+36i35 Index{natural} 11|15b35 17r49
+37U14*Set_Out_Index 37>29 113r19 11|21b14 24l8 24t21 311s7
+37i29 Index{natural} 11|21b29 23r48
+38U14*Set_Word_Index 38>30 114r19 11|27b14 30l8 30t22
+38i30 Index{natural} 11|27b30 29r49
+39U14*Set_Softmax_Mode 39>32 115r19 11|33b14 36l8 36t24
+39m32 Mode{3|14M12} 11|33b32 35r37
+40U14*Set_Sum_Param 41>7 116r19 11|39b14 42l8 42t21
+41m7 Sum{3|14M12} 11|39b29 41r28
+42U14*Set_Weight_Base_Index 43>7 117r19 11|45b14 48l8 48t29
+43i7 Index{natural} 11|45b37 47r61
+45U14*Set_Bias_Base_Index 46>7 118r19 11|51b14 54l8 54t27
+46i7 Index{natural} 11|51b35 53r59
+48U14*Set_N_Inputs 49>7 119r19 11|57b14 60l8 60t20
+49i7 N{natural} 11|57b28 59r52
+53U14*Set_Zero_Point 54>7 121r19 11|69b14 72t7
+54i7 Zero_Point{integer} 11|69b30 71r62
+55U14*Set_Quantized_Multiplier_Register 56>7 122r19 11|75b14 79t7
+56i7 Multiplier{integer} 11|75b49 78r64
+57U14*Set_Quantized_Multiplier_Right_Shift_Register 58>7 123r19 11|82b14
+. 88t7
+58i7 Right_Shift{natural} 11|83b7 87r29
+60U14*Set_N_Outputs 61>7 124r19 11|91b14 94t7
+61i7 N{natural} 11|91b29 93r56
+62U14*Set_Words_To_Copy_From_R_To_A 62>45 125r19 11|96b14 101l8 101t37 310s7
+62i45 Words_To_Copy{natural} 11|96b45 100r29
+65U14*Perform_Op 65>26 127r19 11|104b14 117l8 117t18 121s7 126s7 131s7 136s7
+. 142s7 147s7 152s7 157s7
+65m26 Opcode{3|14M12} 11|104b26 105r30
+66U14*Perform_Max_Pool 128r19 11|119b14 122l8 122t24
+67U14*Perform_Avg_Pool 129r19 11|124b14 127l8 127t24
+68U14*Perform_Sigmoid 130r19 11|129b14 132l8 132t23
+69U14*Perform_ReLU 131r19 11|134b14 137l8 137t20
+70U14*Perform_Softmax 132r19 11|140b14 143l8 143t23
+71U14*Perform_Dense 133r19 11|145b14 148l8 148t21
+72U14*Perform_Conv2D 134r19 11|150b14 153l8 153t22
+73U14*Perform_Copy_R_To_A 135r19 11|155b14 158l8 158t27 312s7
+75V13*Is_Busy{boolean} 137r19 11|162b13 165l8 165t15 176s13
+76V13*Is_Done{boolean} 138r19 11|168b13 171l8 171t15
+77U14*Wait_While_Busy 139r19 11|174b14 179l8 179t23 313s7
+80U14*Write_Word_In_A 80>31 80>48 141r19 11|185b14 190l8 190t23 197s10
+80i31 Index{natural} 11|185b31 187r51
+80m48 Value{3|14M12} 11|185b48 189r24
+81U14*Write_Words_In_A 82>7 82>28 142r19 11|192b14 200l8 200t24
+82a7 Src{3|21A9} 11|192b32 196r16 197r30
+82i28 Start_Index{natural} 11|192b53 194r22
+84V13*Read_Word_From_A{3|14M12} 84>31 144r19 11|202b13 207l8 207t24 215s22
+84i31 Index{natural} 11|202b31 204r51
+85U14*Read_Words_From_A 86<7 86>30 145r19 11|209b14 218l8 218t25
+86a7 Dest{3|21A9} 11|210b7 214r16 215m10
+86i30 Start_Index{natural} 11|210b30 212r22
+88U14*Write_Word_In_B 88>31 88>48 147r19 11|220b14 225l8 225t23 232s10
+88i31 Index{natural} 11|220b31 222r51
+88m48 Value{3|14M12} 11|220b48 224r24
+89U14*Write_Words_In_B 90>7 90>28 148r19 11|227b14 235l8 235t24
+90a7 Src{3|21A9} 11|227b32 231r16 232r30
+90i28 Start_Index{natural} 11|227b53 229r22
+92V13*Read_Word_From_B{3|14M12} 92>31 150r19 11|237b13 242l8 242t24 250s22
+92i31 Index{natural} 11|237b31 239r51
+93U14*Read_Words_From_B 94<7 94>30 151r19 11|244b14 253l8 253t25
+94a7 Dest{3|21A9} 11|245b7 249r16 250m10
+94i30 Start_Index{natural} 11|245b30 247r22
+96U14*Write_Word_In_C 96>31 96>48 153r19 11|255b14 260l8 260t23 267s10
+96i31 Index{natural} 11|255b31 257r51
+96m48 Value{3|14M12} 11|255b48 259r24
+97U14*Write_Words_In_C 98>7 98>28 154r19 11|262b14 270l8 270t24
+98a7 Src{3|21A9} 11|262b32 266r16 267r30
+98i28 Start_Index{natural} 11|262b53 264r22
+100V13*Read_Word_From_C{3|14M12} 100>31 156r19 11|272b13 277l8 277t24 285s22
+100i31 Index{natural} 11|272b31 274r51
+101U14*Read_Words_From_C 102<7 102>30 157r19 11|279b14 288l8 288t25
+102a7 Dest{3|21A9} 11|280b7 284r16 285m10
+102i30 Start_Index{natural} 11|280b30 282r22
+104V13*Read_Word_From_R{3|14M12} 104>31 159r19 11|290b13 295l8 295t24 303s22
+104i31 Index{natural} 11|290b31 292r51
+105U14*Read_Words_From_R 106<7 106>30 160r19 11|297b14 306l8 306t25
+106a7 Dest{3|21A9} 11|298b7 302r16 303m10
+106i30 Start_Index{natural} 11|298b30 300r22
+108U14*Copy_Result_To_Input 108>36 162r19 11|308b14 315l8 315t28
+108i36 Words_To_Copy{natural} 11|308b36 310r38
+X 11 wb_npu_helper.adb
+105m7 Final_Opcode{3|14M12} 110r11 111m10 114r26
+106m7 Val{3|14M12} 114m7 116r29
+186m7 Addr{6|85M9} 189r18
+194i7 J{natural} 197r27 198m10 198r15
+196i11 I{integer} 197r35
+203m7 Addr{6|85M9} 206r24
+212i7 J{natural} 215r40 216m10 216r15
+214i11 I{integer} 215r16
+221m7 Addr{6|85M9} 224r18
+229i7 J{natural} 232r27 233m10 233r15
+231i11 I{integer} 232r35
+238m7 Addr{6|85M9} 241r24
+247i7 J{natural} 250r40 251m10 251r15
+249i11 I{integer} 250r16
+256m7 Addr{6|85M9} 259r18
+264i7 J{natural} 267r27 268m10 268r15
+266i11 I{integer} 267r35
+273m7 Addr{6|85M9} 276r24
+282i7 J{natural} 285r40 286m10 286r15
+284i11 I{integer} 285r16
+291m7 Addr{6|85M9} 294r24
+300i7 J{natural} 303r40 304m10 304r15
+302i11 I{integer} 303r16
+

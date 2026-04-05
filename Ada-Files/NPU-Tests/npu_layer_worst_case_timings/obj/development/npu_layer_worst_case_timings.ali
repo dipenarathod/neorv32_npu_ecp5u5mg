@@ -1,0 +1,314 @@
+V "GNAT Lib v14"
+M P W=8
+A -Og
+A -O3
+A -gnatA
+A --RTS=C:\Users\redra\AppData\Local\alire\cache\builds\bare_runtime_14.0.0_095db6f0\282b01b920f0d5bb2bac604ac6d9e811f26d175144bc99af963e0381e797ee94\
+A -mabi=ilp32
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -gnatwa
+A -gnatw.X
+A -gnatVa
+A -gnaty3
+A -gnatya
+A -gnatyA
+A -gnatyB
+A -gnatyb
+A -gnatyc
+A -gnaty-
+A -gnatyd
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyI
+A -gnatyk
+A -gnatyl
+A -gnatym
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnatW8
+A -gnat2022
+A -gnatn
+A -misa-spec=20191213
+A -march=rv32i_zicsr_zifencei
+P SS ZX
+
+RN
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U npu_layer_worst_case_timings%b  npu_layer_worst_case_timings.adb  441f2f1b NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W input_output_helper%s	input_output_helper.adb	input_output_helper.ali
+W input_output_helper.time_measurements%s  input_output_helper-time_measurements.adb  input_output_helper-time_measurements.ali
+W input_output_helper.utils%s  input_output_helper-utils.adb  input_output_helper-utils.ali
+W interfaces%s		interfac.ads		interfac.ali
+W runtime_support%s	runtime_support.adb	runtime_support.ali
+Z system.img_int%s	s-imgint.ads		s-imgint.ali
+Z system.img_llu%s	s-imgllu.ads		s-imgllu.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+W uart0%s		uart0.adb		uart0.ali
+W wb_npu_helper%s	wb_npu_helper.adb	wb_npu_helper.ali
+W wb_npu_helper.activation%s  wb_npu_helper-activation.adb  wb_npu_helper-activation.ali
+W wb_npu_helper.conv2d%s  wb_npu_helper-conv2d.adb  wb_npu_helper-conv2d.ali
+W wb_npu_helper.dense%s	wb_npu_helper-dense.adb	wb_npu_helper-dense.ali
+W wb_npu_helper.pooling%s  wb_npu_helper-pooling.adb  wb_npu_helper-pooling.ali
+
+D ada.ads		20260405191740 76789da1 ada%s
+D a-assert.ads		20260405191740 ba465f5c ada.assertions%s
+D a-charac.ads		20260405191740 2d3ec45b ada.characters%s
+D a-chlat1.ads		20260405191740 e0d72e76 ada.characters.latin_1%s
+D a-except.ads		20260405191740 5b5f0f2f ada.exceptions%s
+D a-numeri.ads		20260405191740 84bea7a3 ada.numerics%s
+D a-nubinu.ads		20260405191740 93f1f3d1 ada.numerics.big_numbers%s
+D a-nbnbig.ads		20260405191740 31ff4aa1 ada.numerics.big_numbers.big_integers_ghost%s
+D a-string.ads		20260405191740 90ac6797 ada.strings%s
+D a-strfix.ads		20260405191740 100e0a05 ada.strings.fixed%s
+D a-strmap.ads		20260405191740 1f91ebb6 ada.strings.maps%s
+D a-strmap.adb		20260405191740 da700cc5 ada.strings.maps%b
+D a-strsea.ads		20260405191740 2b7aab86 ada.strings.search%s
+D a-textio.ads		20260405191740 6c013a58 ada.text_io%s
+D a-unccon.ads		20260405191740 0e9b276f ada.unchecked_conversion%s
+D input_output_helper.ads  20260405190546 e32e24f3 input_output_helper%s
+D input_output_helper.adb  20260405190546 54564662 input_output_helper%b
+D input_output_helper-time_measurements.ads  20260405190546 1f2363fb input_output_helper.time_measurements%s
+D input_output_helper-time_measurements.adb  20260405190546 1ecb2736 input_output_helper.time_measurements%b
+D input_output_helper-utils.ads  20260405190546 51b2d0dc input_output_helper.utils%s
+D input_output_helper-utils.adb  20260405190546 9cfa4b45 input_output_helper.utils%b
+D interfac.ads		20260405191740 9111f9c1 interfaces%s
+D interrupts.ads	20260405191616 56bb57a4 interrupts%s
+D neorv32.ads		20260405191616 d5039e82 neorv32%s
+D npu_layer_worst_case_timings.adb  20260405162612 546292e7 npu_layer_worst_case_timings%b
+D riscv.ads		20260405191616 01b22458 riscv%s
+D riscv-csr.ads		20260405191616 0134c358 riscv.csr%s
+D riscv-csr_generic.ads	20260405191616 5bcb4405 riscv.csr_generic%s
+D riscv-types.ads	20260405191616 d60fb95a riscv.types%s
+D runtime_support.ads	20260405161850 7bf0b3fb runtime_support%s
+D system.ads		20260405191746 28e4acdd system%s
+D s-atacco.ads		20260405191740 5868e3ba system.address_to_access_conversions%s
+D s-assert.ads		20260405191740 9c4520c7 system.assertions%s
+D s-bitops.ads		20260405191742 cdf3ac3c system.bit_ops%s
+D s-fatflt.ads		20260405191742 11beb392 system.fat_flt%s
+D s-fatgen.ads		20260405191742 d28c6cfe system.fat_gen%s
+D s-fatgen.adb		20260405191742 6cc1fec9 system.fat_gen%b
+D s-imagei.ads		20260405191742 5e131ce0 system.image_i%s
+D s-imageu.ads		20260405191742 b0b50650 system.image_u%s
+D s-imageu.adb		20260405191742 adcee293 system.image_u%b
+D s-imgint.ads		20260405191742 67e4edfb system.img_int%s
+D s-imgllu.ads		20260405191742 55ba53d8 system.img_llu%s
+D s-maccod.ads		20260405191744 cdca081e system.machine_code%s
+D s-parame.ads		20260405191746 01611d59 system.parameters%s
+D s-secsta.ads		20260405191746 bd894d4b system.secondary_stack%s
+D s-stoele.ads		20260405191746 ccded4e8 system.storage_elements%s
+D s-unstyp.ads		20260405191746 fa2a7f59 system.unsigned_types%s
+D s-valspe.ads		20260405191746 b0fcd073 system.val_spec%s
+D s-vaispe.ads		20260405191746 8280550e system.value_i_spec%s
+D s-vaispe.adb		20260405191746 dbcabb05 system.value_i_spec%b
+D s-vauspe.ads		20260405191746 89269ba5 system.value_u_spec%s
+D s-vauspe.adb		20260405191746 8524adb4 system.value_u_spec%b
+D s-vs_int.ads		20260405191746 06b6b724 system.vs_int%s
+D s-vs_llu.ads		20260405191746 8f3536c5 system.vs_llu%s
+D s-vs_uns.ads		20260405191746 e7f47a27 system.vs_uns%s
+D uart0.ads		20260405191616 bac314ca uart0%s
+D wb_npu_address_map.ads  20260402200148 7efd4215 wb_npu_address_map%s
+D wb_npu_helper.ads	20260402200148 2fb2b504 wb_npu_helper%s
+D wb_npu_helper.adb	20260402200148 760649ee wb_npu_helper%b
+D wb_npu_helper-activation.ads  20260402200148 a1dcda53 wb_npu_helper.activation%s
+D wb_npu_helper-activation.adb  20260402200148 6d5c59c3 wb_npu_helper.activation%b
+D wb_npu_helper-conv2d.ads  20260402200148 12700d1f wb_npu_helper.conv2d%s
+D wb_npu_helper-conv2d.adb  20260402200148 47384eab wb_npu_helper.conv2d%b
+D wb_npu_helper-dense.ads  20260402200148 747d883d wb_npu_helper.dense%s
+D wb_npu_helper-dense.adb  20260402200148 56069842 wb_npu_helper.dense%b
+D wb_npu_helper-pooling.ads  20260402200148 e920c967 wb_npu_helper.pooling%s
+D wb_npu_helper-pooling.adb  20260402200148 518ff436 wb_npu_helper.pooling%b
+G a e
+G c Z b b [npu_layer_worst_case_timings standard 23 11 none]
+G r c none [npu_layer_worst_case_timings standard 23 11 none] [init uart0 3 14 none]
+G r c none [npu_layer_worst_case_timings standard 23 11 none] [tensor_words input_output_helper 62 13 none]
+G r c none [npu_layer_worst_case_timings standard 23 11 none] [write_word_in_a wb_npu_helper 80 14 none]
+G r c none [npu_layer_worst_case_timings standard 23 11 none] [read_cycle input_output_helper__time_measurements 17 13 none]
+G r c none [npu_layer_worst_case_timings standard 23 11 none] [apply_relu_all_words wb_npu_helper__activation 3 14 none]
+G r c none [npu_layer_worst_case_timings standard 23 11 none] [apply_sigmoid_all_words wb_npu_helper__activation 5 14 none]
+G r c none [npu_layer_worst_case_timings standard 23 11 none] [apply_softmax_all_words wb_npu_helper__activation 7 14 none]
+G r c none [npu_layer_worst_case_timings standard 23 11 none] [apply_maxpool_2x2_all_words wb_npu_helper__pooling 5 14 none]
+G r c none [npu_layer_worst_case_timings standard 23 11 none] [apply_avgpool_2x2_all_words wb_npu_helper__pooling 7 14 none]
+G r c none [npu_layer_worst_case_timings standard 23 11 none] [write_word_in_b wb_npu_helper 88 14 none]
+G r c none [npu_layer_worst_case_timings standard 23 11 none] [write_word_in_c wb_npu_helper 96 14 none]
+G r c none [npu_layer_worst_case_timings standard 23 11 none] [apply_dense_all_words wb_npu_helper__dense 4 14 none]
+G r c none [npu_layer_worst_case_timings standard 23 11 none] [apply_conv2d_all_words wb_npu_helper__conv2d 3 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 25|17r6 17r39 18r6 18r40 19r6 19r40
+X 9 a-string.ads
+16K13*Strings 35e16 25|18r10 18r44 19w10 19r44
+33n37*Both{33E9} 25|66r73 67r48 99r62 110r65 124r37 137r68 148r68 226r54
+. 228r55 230r76 237r48 239r50 241r51 248r13
+X 10 a-strfix.ads
+49K21*Fixed 1386e22 25|18w18 18r52
+1129V13*Trim{string} 25|66s39 67s18 99s37 110s40 124s12 137s43 148s43 226s12
+. 228s12 230s12 237s12 239s12 241s12 243s12
+X 14 a-textio.ads
+36K13*Text_IO 62e16 25|17w10 17r43
+54U14*Put_Line 25|57s7 65s7 213s7 253s7 263s4 264s4 274s4
+58U14*New_Line 25|270s7
+X 16 input_output_helper.ads
+6K9*Input_Output_Helper 89e24 25|7w6 7r41 8r6 8r40 9r6 10r5
+14M12*Word{22|81M9} 25|28r34 28r42 70r53 77r53 84r53
+62V13*Tensor_Words{natural} 25|92s41 103s36 114s36 130s36 141s36 156s9 158s9
+. 186s9 188s9
+63b20 One_Dimensional{boolean} 25|156r31 158r40 186r31 188r31
+X 18 input_output_helper-time_measurements.ads
+9K29*Time_Measurements 23e4 25|9w26 10r25
+17V13*Read_Cycle{22|84M9} 25|96s13 98s13 107s13 109s13 118s13 120s13 134s13
+. 136s13 145s13 147s13 167s13 176s13 197s13 207s13
+X 20 input_output_helper-utils.ads
+1K29*Utils 12e30 25|8w26 8r60
+X 22 interfac.ads
+38K9*Interfaces 233e15 25|16w6 16r40
+81M9*Unsigned_32
+84M9*Unsigned_64 25|25r24 61r40 63r21 66r45 67r24 93r21 104r16 115r16 131r16
+. 142r16 159r25 189r19 263r64
+X 25 npu_layer_worst_case_timings.adb
+23U11*Npu_Layer_Worst_Case_Timings 23b11 278l5 278t33
+25m4 Clock_Hz{22|84M9} 63r59 263r83
+28m4 Full_Positive_Word{16|14M12} 95r28 106r28 117r28 133r28 144r28 161r30
+. 162r30 191r30 192r30
+35i4 Worst_Spatial_N{natural} 216r22 217r25 218r25 219r25 220r25
+38i4 Worst_Dense_Inputs{natural} 223r10 226r33 230r33
+39i4 Worst_Dense_Neurons{natural} 224r10 228r33 230r54
+42i4 Worst_Conv_N{natural} 233r10 237r33 246r19 247r19
+43i4 Worst_Conv_Cin{natural} 234r10 239r33 245r20
+44i4 Worst_Conv_Cout{natural} 235r10 241r33 245r37
+47b4 Run_Dimension_Sweep{boolean} 269r7
+49a4 Sweep_Dims(natural) 255r16
+52i4 Quant_Mult{integer} 174r46 205r46
+53i4 Right_Shift{natural} 175r46 206r46
+55U14 Print_Csv_Header 55b14 58l8 58t24 214s7 254s7
+60U14 Print_Csv_Row 60b14 61>7 61>14 61>31 68l8 68t21 99s7 110s7 121s7 137s7
+. 148s7 177s7 208s7
+61a7 Layer{string} 66r10
+61a14 Params{string} 66r24
+61m31 Cycles{22|84M9} 63r37 66r64
+63m7 US{22|84M9} 67r43
+70U14 Fill_A_Words 70b14 70>28 70>49 75l8 75t20 95s7 106s7 117s7 133s7 144s7
+. 161s7 191s7
+70i28 Num_Words{natural} 72r21
+70m49 W{16|14M12} 73r30
+72i11 I{integer} 73r27
+77U14 Fill_B_Words 77b14 77>28 77>49 82l8 82t20 162s7 192s7
+77i28 Num_Words{natural} 79r21
+77m49 W{16|14M12} 80r30
+79i11 I{integer} 80r27
+84U14 Fill_C_Words 84b14 84>28 84>49 89l8 89t20
+84i28 Num_Words{natural} 86r21
+84m49 W{16|14M12} 87r30
+86i11 I{integer} 87r27
+91U14 Time_ReLU_NxN 91b14 91>29 100l8 100t21 216s7 256s10
+91i29 N{natural} 92r55 97r29 99r58
+92i7 Words{natural} 95r21
+93m7 T0{22|84M9} 96m7 99r74
+93m11 T1{22|84M9} 98m7 99r69
+102U14 Time_Sigmoid_NxN 102b14 102>32 111l8 111t24 217s7
+102i32 N{natural} 103r50 108r32 110r61
+103i7 Words{natural} 106r21
+104m7 T0{22|84M9} 107m7 110r77
+104m11 T1{22|84M9} 109m7 110r72
+113U14 Time_Softmax_NxN 113b14 113>32 127l8 127t24 218s7
+113i32 N{natural} 114r50 119r32 124r33
+114i7 Words{natural} 117r21
+115m7 T0{22|84M9} 118m7 126r15
+115m11 T1{22|84M9} 120m7 126r10
+129U14 Time_MaxPool_NxN 129b14 129>32 138l8 138t24 219s7 257s10
+129i32 N{natural} 130r50 135r36 137r64
+130i7 Words{natural} 133r21
+131m7 T0{22|84M9} 134m7 137r80
+131m11 T1{22|84M9} 136m7 137r75
+140U14 Time_AvgPool_NxN 140b14 140>32 149l8 149t24 220s7
+140i32 N{natural} 141r50 146r36 148r64
+141i7 Words{natural} 144r21
+142m7 T0{22|84M9} 145m7 148r80
+142m11 T1{22|84M9} 147m7 148r75
+151U14 Time_Dense 151b14 152>7 152>25 152>44 178l8 178t18 222s7
+152i7 Inputs{natural} 154r45 156r23 169r46
+152i25 Neurons{natural} 154r54 163r21 170r46
+152a44 Tag{string} 177r31
+154i7 Weight_Elements{natural} 158r23
+155i7 Words_A{natural} 161r21
+157i7 Words_B{natural} 162r21
+159m7 T0{22|84M9} 167m7 177r41
+159m11 T1{22|84M9} 176m7 177r36
+163i11 I{integer} 164r27
+180U14 Time_Conv2D 180b14 181>7 181>20 181>35 181>51 209l8 209t19 232s7
+181i7 N{natural} 183r43 183r47 199r46
+181i20 Cin{natural} 183r37 184r41 200r46
+181i35 Cout{natural} 184r47 193r21 201r46
+181a51 Tag{string} 208r32
+183i7 In_Els{natural} 186r23
+184i7 Wt_Els{natural} 188r23
+185i7 Words_A{natural} 191r21
+187i7 Words_B{natural} 192r21
+189m7 T0{22|84M9} 197m7 208r42
+189m11 T1{22|84M9} 207m7 208r37
+193i11 F{integer} 194r27
+211U14 Run_Worst_Case_Block 211b14 249l8 249t28 267s4
+251U14 Run_Scaling_Sweep 251b14 259l8 259t25 271s7
+255i11 D=255:16{natural} 256r25 257r28
+X 30 runtime_support.ads
+3K9*Runtime_Support 25|21w6 30|6e20
+X 56 uart0.ads
+1K9*Uart0 25|20w6 262r4 56|5e10
+3U14*Init 25|262s10
+X 58 wb_npu_helper.ads
+6K9*Wb_Npu_Helper 25|11w6 11r39 12r6 12r40 13r6 13r39 14r6 14r39 15r6 15r39
+. 58|164e18
+80U14*Write_Word_In_A 25|73s10
+88U14*Write_Word_In_B 25|80s10
+96U14*Write_Word_In_C 25|87s10 164s10 194s10
+X 60 wb_npu_helper-activation.ads
+1K23*Activation 25|12w20 12r54 60|13e29
+3U14*Apply_ReLU_All_Words 25|97s7
+5U14*Apply_Sigmoid_All_Words 25|108s7
+7U14*Apply_Softmax_All_Words 25|119s7
+X 62 wb_npu_helper-conv2d.ads
+1K23*Conv2D 25|15w20 15r53 62|15e25
+3U14*Apply_Conv2D_All_Words 25|198s7
+4i7 N{natural} 25|199r10
+5i7 Input_Channels{natural} 25|200r10
+6i7 Filters{natural} 25|201r10
+7i7 Weight_Base_Index{natural} 25|202r10
+8i7 Bias_Base_Index{natural} 25|203r10
+9i7 Zero_Point{integer} 25|204r10
+10i7 Quantized_Multiplier{integer} 25|205r10
+11i7 Quantized_Multiplier_Right_Shift{natural} 25|206r10
+X 64 wb_npu_helper-dense.ads
+1K23*Dense 25|14w20 14r53 64|14e24
+4U14*Apply_Dense_All_Words 25|168s7
+5i7 Inputs{natural} 25|169r10
+6i7 Neurons{natural} 25|170r10
+7i7 Weight_Base_Index{natural} 25|171r10
+8i7 Bias_Base_Index{natural} 25|172r10
+9i7 Zero_Point{integer} 25|173r10
+10i7 Quantized_Multiplier{integer} 25|174r10
+11i7 Quantized_Multiplier_Right_Shift{natural} 25|175r10
+X 66 wb_npu_helper-pooling.ads
+1K23*pooling 25|13w20 13r53 66|16e26
+5U14*Apply_MaxPool_2x2_All_Words 25|135s7
+7U14*Apply_AvgPool_2x2_All_words 25|146s7
+

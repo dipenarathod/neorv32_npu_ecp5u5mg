@@ -1,0 +1,134 @@
+V "GNAT Lib v14"
+A -O3
+A -O3
+A -gnatA
+A --RTS=C:\Users\redra\AppData\Local\alire\cache\builds\bare_runtime_14.0.0_095db6f0\282b01b920f0d5bb2bac604ac6d9e811f26d175144bc99af963e0381e797ee94\
+A -mabi=ilp32
+A -gnatn
+A -ffunction-sections
+A -fdata-sections
+A -gnatW8
+A -gnat2022
+A -gnatn
+A -misa-spec=20191213
+A -march=rv32i_zicsr_zifencei
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U wb_npu_helper.activation%b  wb_npu_helper-activation.adb  72dee898 NE OO PK
+W input_output_helper%s	input_output_helper.adb	input_output_helper.ali
+W input_output_helper.utils%s  input_output_helper-utils.adb  input_output_helper-utils.ali
+W interfaces%s		interfac.ads		interfac.ali
+W wb_npu_address_map%s	wb_npu_address_map.ads	wb_npu_address_map.ali
+W wb_npu_helper%s	wb_npu_helper.adb	wb_npu_helper.ali
+
+U wb_npu_helper.activation%s  wb_npu_helper-activation.ads  8e6e6f57 BN EE NE OO PK
+W wb_npu_helper%s	wb_npu_helper.adb	wb_npu_helper.ali
+
+D ada.ads		20260405191740 76789da1 ada%s
+D a-textio.ads		20260405191740 6c013a58 ada.text_io%s
+D input_output_helper.ads  20260405190546 e32e24f3 input_output_helper%s
+D input_output_helper.adb  20260405190546 54564662 input_output_helper%b
+D input_output_helper-utils.ads  20260405190546 51b2d0dc input_output_helper.utils%s
+D input_output_helper-utils.adb  20260405190546 9cfa4b45 input_output_helper.utils%b
+D interfac.ads		20260405191740 9111f9c1 interfaces%s
+D system.ads		20260405191746 28e4acdd system%s
+D s-atacco.ads		20260405191740 5868e3ba system.address_to_access_conversions%s
+D s-stoele.ads		20260405191746 ccded4e8 system.storage_elements%s
+D wb_npu_address_map.ads  20260402200148 7efd4215 wb_npu_address_map%s
+D wb_npu_helper.ads	20260402200148 2fb2b504 wb_npu_helper%s
+D wb_npu_helper.adb	20260402200148 760649ee wb_npu_helper%b
+D wb_npu_helper-activation.ads  20260402200148 a1dcda53 wb_npu_helper.activation%s
+D wb_npu_helper-activation.adb  20260402200148 6d5c59c3 wb_npu_helper.activation%b
+G a e
+G c Z s b [apply_relu_all_words wb_npu_helper__activation 3 14 none]
+G c Z s b [apply_sigmoid_all_words wb_npu_helper__activation 5 14 none]
+G c Z s b [apply_softmax_all_words wb_npu_helper__activation 7 14 none]
+G r c none [apply_relu_all_words wb_npu_helper__activation 3 14 none] [tensor_words input_output_helper 62 13 none]
+G r c none [apply_relu_all_words wb_npu_helper__activation 3 14 none] [set_n_inputs wb_npu_helper 48 14 none]
+G r c none [apply_relu_all_words wb_npu_helper__activation 3 14 none] [set_word_index wb_npu_helper 38 14 none]
+G r c none [apply_relu_all_words wb_npu_helper__activation 3 14 none] [perform_relu wb_npu_helper 69 14 none]
+G r c none [apply_relu_all_words wb_npu_helper__activation 3 14 none] [wait_while_busy wb_npu_helper 77 14 none]
+G r c none [apply_relu_all_words wb_npu_helper__activation 3 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [apply_sigmoid_all_words wb_npu_helper__activation 5 14 none] [tensor_words input_output_helper 62 13 none]
+G r c none [apply_sigmoid_all_words wb_npu_helper__activation 5 14 none] [set_n_inputs wb_npu_helper 48 14 none]
+G r c none [apply_sigmoid_all_words wb_npu_helper__activation 5 14 none] [set_word_index wb_npu_helper 38 14 none]
+G r c none [apply_sigmoid_all_words wb_npu_helper__activation 5 14 none] [perform_sigmoid wb_npu_helper 68 14 none]
+G r c none [apply_sigmoid_all_words wb_npu_helper__activation 5 14 none] [wait_while_busy wb_npu_helper 77 14 none]
+G r c none [apply_sigmoid_all_words wb_npu_helper__activation 5 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [apply_softmax_all_words wb_npu_helper__activation 7 14 none] [tensor_words input_output_helper 62 13 none]
+G r c none [apply_softmax_all_words wb_npu_helper__activation 7 14 none] [set_softmax_mode wb_npu_helper 39 14 none]
+G r c none [apply_softmax_all_words wb_npu_helper__activation 7 14 none] [set_n_inputs wb_npu_helper 48 14 none]
+G r c none [apply_softmax_all_words wb_npu_helper__activation 7 14 none] [set_word_index wb_npu_helper 38 14 none]
+G r c none [apply_softmax_all_words wb_npu_helper__activation 7 14 none] [perform_softmax wb_npu_helper 70 14 none]
+G r c none [apply_softmax_all_words wb_npu_helper__activation 7 14 none] [wait_while_busy wb_npu_helper 77 14 none]
+G r c none [apply_softmax_all_words wb_npu_helper__activation 7 14 none] [write_reg input_output_helper 46 14 none]
+G r c none [apply_softmax_all_words wb_npu_helper__activation 7 14 none] [read_word_from_a wb_npu_helper 84 13 none]
+G r c none [apply_softmax_all_words wb_npu_helper__activation 7 14 none] [unpack_four_bytes input_output_helper__utils 4 14 none]
+G r c none [apply_softmax_all_words wb_npu_helper__activation 7 14 none] [pack_four_bytes input_output_helper__utils 3 13 none]
+G r c none [apply_softmax_all_words wb_npu_helper__activation 7 14 none] [write_word_in_a wb_npu_helper 80 14 none]
+G r c none [apply_softmax_all_words wb_npu_helper__activation 7 14 none] [set_sum_param wb_npu_helper 40 14 none]
+X 3 input_output_helper.ads
+6K9*Input_Output_Helper 89e24 15|2r6 2r37
+11M12*Unsigned_Byte{7|70M9} 15|43r24
+14M12*Word{7|81M9} 15|40r24 41r24 42r24 103r26 103r38 103r50 103r62 112r29
+. 115r29 115r41 118r29 118r41 118r53 135r22
+46U14*Write_Reg 15|18s7 30s7 62s7 141s7
+62V13*Tensor_Words{natural} 15|12s35 24s35 39s44
+X 5 input_output_helper-utils.ads
+1K29*Utils 12e30 15|2w26 2r57
+3V13*Pack_Four_Bytes{3|14M12} 15|90s15
+4U14*Unpack_Four_Bytes 15|70s10 102s13 109s10
+X 7 interfac.ads
+38K9*Interfaces 233e15 15|1w6 1r37
+70M9*Unsigned_8
+81M9*Unsigned_32
+X 8 system.ads
+85M9*Address
+X 11 wb_npu_address_map.ads
+2K9*wb_npu_address_map 70e23 15|3w6 3r30
+6m4*CTRL_Addr{8|85M9} 15|18r18 30r18 62r18 141r18
+X 12 wb_npu_helper.ads
+6K9*Wb_Npu_Helper 164e18 14|1r9 13r5 15|4r14 144r5
+24m4*SOFTMAX_MODE_EXP{3|14M12} 15|57r25
+25m4*SOFTMAX_MODE_DIV{3|14M12} 15|136r25
+38U14*Set_Word_Index 15|15s7 27s7 59s7 138s7
+39U14*Set_Softmax_Mode 15|57s7 136s7
+40U14*Set_Sum_Param 15|135s7
+48U14*Set_N_Inputs 15|14s7 26s7 58s7 137s7
+68U14*Perform_Sigmoid 15|28s7
+69U14*Perform_ReLU 15|16s7
+70U14*Perform_Softmax 15|60s7 139s7
+77U14*Wait_While_Busy 15|17s7 29s7 61s7 140s7
+80U14*Write_Word_In_A 15|91s10
+84V13*Read_Word_From_A{3|14M12} 15|69s15 101s18 108s15
+X 14 wb_npu_helper-activation.ads
+1K23*Activation 12|6k9 14|13l19 13e29 15|4b28 144l19 144t29
+3U14*Apply_ReLU_All_Words 4>7 4>20 10r18 15|9b14 19l8 19t28
+4i7 N{natural} 15|10b7 12r49
+4b20 One_Dimensional{boolean} 15|10b20 12r52
+5U14*Apply_Sigmoid_All_Words 6>7 6>20 11r18 15|21b14 31l8 31t31
+6i7 N{natural} 15|22b7 24r49
+6b20 One_Dimensional{boolean} 15|22b20 24r52
+7U14*Apply_Softmax_All_Words 8>7 8>20 12r18 15|36b14 142l8 142t31
+8i7 N{natural} 15|37b7 39r58 48r34 48r41 48r45
+8b20 One_Dimensional{boolean} 15|37b20 39r61 48r13
+X 15 wb_npu_helper-activation.adb
+12i7 Words{natural} 14r21
+24i7 Words{natural} 26r21
+39i7 Words{natural} 58r21 137r21
+40m7 Sum{3|14M12} 103m13 103r20 112m16 112r23 115m16 115r23 118m16 118r23
+. 128r11 130r24
+41m7 Inverted_Sum{3|14M12} 129m10 135r28
+42m7 W{3|14M12} 69m10 70r29 90m10 91r39 101m13 102r32 108m10 109r29
+43m7 B0{3|11M12} 70m32 90r32 102m35 103r32 109m32 112r35 115r35 118r35
+43m11 B1{3|11M12} 70m36 74m16 90r36 102m39 103r44 109m36 115r47 118r47
+43m15 B2{3|11M12} 70m40 75m16 79m16 90r40 102m43 103r56 109m40 118r59
+43m19 B3{3|11M12} 70m44 76m16 80m16 83m16 90r44 102m47 103r68 109m44
+47i7 Total_Elements{natural} 51r40 54r45
+51i7 Full_Words{natural} 69r33 91r27 99r11 100r24 108r33
+54i7 Left_Over_Bytes{natural} 67r10 72r15 107r11 110r15
+100i14 I{integer} 101r36
+

@@ -1,0 +1,89 @@
+V "GNAT Lib v14"
+A -O3
+A -O3
+A -gnatA
+A --RTS=C:\Users\redra\AppData\Local\alire\cache\builds\bare_runtime_14.0.0_095db6f0\282b01b920f0d5bb2bac604ac6d9e811f26d175144bc99af963e0381e797ee94\
+A -mabi=ilp32
+A -gnatn
+A -ffunction-sections
+A -fdata-sections
+A -gnatW8
+A -gnat2022
+A -gnatn
+A -misa-spec=20191213
+A -march=rv32i_zicsr_zifencei
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U wb_npu_helper.dense%b	wb_npu_helper-dense.adb	5c86526a NE OO PK
+W wb_npu_address_map%s	wb_npu_address_map.ads	wb_npu_address_map.ali
+W wb_npu_helper%s	wb_npu_helper.adb	wb_npu_helper.ali
+
+U wb_npu_helper.dense%s	wb_npu_helper-dense.ads	5bcf3d39 BN EE NE OO PK
+W wb_npu_helper%s	wb_npu_helper.adb	wb_npu_helper.ali
+
+D ada.ads		20260405191740 76789da1 ada%s
+D a-textio.ads		20260405191740 6c013a58 ada.text_io%s
+D input_output_helper.ads  20260405190546 e32e24f3 input_output_helper%s
+D input_output_helper.adb  20260405190546 54564662 input_output_helper%b
+D interfac.ads		20260405191740 9111f9c1 interfaces%s
+D system.ads		20260405191746 28e4acdd system%s
+D s-atacco.ads		20260405191740 5868e3ba system.address_to_access_conversions%s
+D s-stoele.ads		20260405191746 ccded4e8 system.storage_elements%s
+D wb_npu_address_map.ads  20260402200148 7efd4215 wb_npu_address_map%s
+D wb_npu_helper.ads	20260402200148 2fb2b504 wb_npu_helper%s
+D wb_npu_helper.adb	20260402200148 760649ee wb_npu_helper%b
+D wb_npu_helper-dense.ads  20260402200148 747d883d wb_npu_helper.dense%s
+D wb_npu_helper-dense.adb  20260402200148 56069842 wb_npu_helper.dense%b
+G a e
+G c Z s b [apply_dense_all_words wb_npu_helper__dense 4 14 none]
+G r c none [apply_dense_all_words wb_npu_helper__dense 4 14 none] [set_n_inputs wb_npu_helper 48 14 none]
+G r c none [apply_dense_all_words wb_npu_helper__dense 4 14 none] [set_n_outputs wb_npu_helper 60 14 none]
+G r c none [apply_dense_all_words wb_npu_helper__dense 4 14 none] [set_zero_point wb_npu_helper 53 14 none]
+G r c none [apply_dense_all_words wb_npu_helper__dense 4 14 none] [set_quantized_multiplier_register wb_npu_helper 55 14 none]
+G r c none [apply_dense_all_words wb_npu_helper__dense 4 14 none] [set_quantized_multiplier_right_shift_register wb_npu_helper 57 14 none]
+G r c none [apply_dense_all_words wb_npu_helper__dense 4 14 none] [set_word_index wb_npu_helper 38 14 none]
+G r c none [apply_dense_all_words wb_npu_helper__dense 4 14 none] [set_weight_base_index wb_npu_helper 42 14 none]
+G r c none [apply_dense_all_words wb_npu_helper__dense 4 14 none] [set_bias_base_index wb_npu_helper 45 14 none]
+G r c none [apply_dense_all_words wb_npu_helper__dense 4 14 none] [set_out_index wb_npu_helper 37 14 none]
+G r c none [apply_dense_all_words wb_npu_helper__dense 4 14 none] [perform_dense wb_npu_helper 71 14 none]
+G r c none [apply_dense_all_words wb_npu_helper__dense 4 14 none] [wait_while_busy wb_npu_helper 77 14 none]
+G r c none [apply_dense_all_words wb_npu_helper__dense 4 14 none] [write_reg input_output_helper 46 14 none]
+X 3 input_output_helper.ads
+46U14*Write_Reg 13|35s7
+X 6 system.ads
+85M9*Address
+X 9 wb_npu_address_map.ads
+2K9*wb_npu_address_map 70e23 13|1w6 1r30
+6m4*CTRL_Addr{6|85M9} 13|35r18
+X 10 wb_npu_helper.ads
+6K9*Wb_Npu_Helper 164e18 12|1r9 14r5 13|2r14 38r5
+37U14*Set_Out_Index 13|31s7
+38U14*Set_Word_Index 13|28s7
+42U14*Set_Weight_Base_Index 13|29s7
+45U14*Set_Bias_Base_Index 13|30s7
+48U14*Set_N_Inputs 13|20s7
+53U14*Set_Zero_Point 13|23s7
+55U14*Set_Quantized_Multiplier_Register 13|24s7
+57U14*Set_Quantized_Multiplier_Right_Shift_Register 13|25s7
+60U14*Set_N_Outputs 13|21s7
+71U14*Perform_Dense 13|33s7
+77U14*Wait_While_Busy 13|34s7
+X 12 wb_npu_helper-dense.ads
+1K23*Dense 10|6k9 12|14l19 14e24 13|2b28 38l19 38t24
+4U14*Apply_Dense_All_Words 5>7 6>7 7>7 8>7 9>7 10>7 11>7 13r18 13|6b14 36l8
+. 36t29
+5i7 Inputs{natural} 13|7b7 20r21
+6i7 Neurons{natural} 13|8b7 21r22
+7i7 Weight_Base_Index{natural} 13|9b7 29r30
+8i7 Bias_Base_Index{natural} 13|10b7 30r28
+9i7 Zero_Point{integer} 13|11b7 23r23
+10i7 Quantized_Multiplier{integer} 13|12b7 24r42
+11i7 Quantized_Multiplier_Right_Shift{natural} 13|13b7 26r10
+X 13 wb_npu_helper-dense.adb
+15i7 Input_Base_Index{natural} 28r23
+17i7 W_Base{natural}
+18i7 B_Index{natural}
+
