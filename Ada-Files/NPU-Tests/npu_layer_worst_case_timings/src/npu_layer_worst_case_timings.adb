@@ -1,8 +1,6 @@
---  Worst-case (full-tensor / max-buffer) timing for each NPU op, independently.
---  Output is CSV-friendly for plotting (timing only).
---
---  BRAM limits (RTL tensor_operations_base): A/R 2500 words, B 9000, C 2000;
---  four INT8 values per 32-bit word.
+--  Bench each NPU op on its own, using the biggest shapes that still fit in BRAM.
+--  Hardware packs four INT8 values in each 32-bit word (Q0.7). Tensor sizes in
+--  the RTL are capped roughly at: A and R ~2500 words, B ~9000, C ~2000.
 
 with Input_Output_Helper;           use Input_Output_Helper;
 with Input_Output_Helper.Utils;    use Input_Output_Helper.Utils;
@@ -22,33 +20,33 @@ with Runtime_Support;
 
 procedure Npu_Layer_Worst_Case_Timings is
 
+   --  Match the CPU clock in the FPGA top (used to turn cycles into microseconds).
    Clock_Hz : constant Unsigned_64 := 72_000_000;
 
-   --  Packed pattern: all lanes saturated positive (stress path similar to “full” tensor)
+   --  0x7F per byte = max positive Q0.7; good enough to stress the datapath.
    Full_Positive_Word : constant Word := Word (16#7F7F_7F7F#);
 
-   --  -------------------------------------------------------------------------
-   --  Worst-case geometry (tune here for your bitstream / thesis table)
-   --  -------------------------------------------------------------------------
-
-   --  Square N×N activations / pooling: N^2 <= 10_000 elements (tensor A)
+   --  100x100 = 10k elements, fills tensor A for spatial ops (ReLU, pool, etc.).
    Worst_Spatial_N : constant Natural := 100;
 
-   --  Dense: maximize Inputs×Neurons with weight bytes Inputs×Neurons <= 36_000
+   --  Dense weights live in B as a flat INT8 vector: Inputs * Neurons bytes.
+   --  3600 * 10 = 36k bytes -> 9k words, which is what B can hold.
    Worst_Dense_Inputs  : constant Natural := 3_600;
    Worst_Dense_Neurons : constant Natural := 10;
 
-   --  Conv2D valid 3×3: chosen so A/B/R/C stay within BRAM (see comments below)
+   --  Valid 3x3 conv, stride 1: output side is N-2. Picked so activations,
+   --  kernels, biases, and the output map all stay under the BRAM limits.
    Worst_Conv_N     : constant Natural := 14;
    Worst_Conv_Cin   : constant Natural := 51;
    Worst_Conv_Cout  : constant Natural := 69;
 
-   --  If True, also print scaling rows for ReLU / MaxPool (like legacy timing script)
+   --  Extra ReLU + MaxPool runs at several N values for curve.
    Run_Dimension_Sweep : constant Boolean := True;
 
    Sweep_Dims : constant array (Natural range <>) of Natural :=
      (4, 8, 12, 16, 20, 24, 28, 50, 100);
 
+   --  Same requant recipe as the other NPU tests.
    Quant_Mult  : constant Integer  := 16#4000_0000#;
    Right_Shift : constant Natural := 7;
 
@@ -62,11 +60,13 @@ procedure Npu_Layer_Worst_Case_Timings is
    is
       US : constant Unsigned_64 := (Cycles * 1_000_000) / Clock_Hz;
    begin
+      --  Trim strips the leading space Ada puts on numeric 'Image.
       Put_Line
         (Layer & "," & Params & "," & Trim (Unsigned_64'Image (Cycles), Both)
          & "," & Trim (Unsigned_64'Image (US), Both));
    end Print_Csv_Row;
 
+   --  Slow but simple: no giant local arrays on the stack.
    procedure Fill_A_Words (Num_Words : Natural; W : Word) is
    begin
       for I in 0 .. Num_Words - 1 loop
@@ -116,6 +116,7 @@ procedure Npu_Layer_Worst_Case_Timings is
    begin
       Fill_A_Words (Words, Full_Positive_Word);
       T0 := Read_Cycle;
+      --  Two HW passes (exp, then div) plus an Ada loop that sums exponents in the middle.
       Apply_Softmax_All_Words (N);
       T1 := Read_Cycle;
       Print_Csv_Row
@@ -158,6 +159,7 @@ procedure Npu_Layer_Worst_Case_Timings is
         Tensor_Words (Weight_Elements, One_Dimensional => True);
       T0, T1          : Unsigned_64;
    begin
+      --  A: input vector (packed). B: all weights row-major. C: one int32 bias word per neuron.
       Fill_A_Words (Words_A, Full_Positive_Word);
       Fill_B_Words (Words_B, Full_Positive_Word);
       for I in 0 .. Neurons - 1 loop
@@ -188,6 +190,7 @@ procedure Npu_Layer_Worst_Case_Timings is
         Tensor_Words (Wt_Els, One_Dimensional => True);
       T0, T1    : Unsigned_64;
    begin
+      --  Feature maps stacked in A; 3x3 kernels for every (cin, cout) pair in B.
       Fill_A_Words (Words_A, Full_Positive_Word);
       Fill_B_Words (Words_B, Full_Positive_Word);
       for F in 0 .. Cout - 1 loop
@@ -229,6 +232,7 @@ procedure Npu_Layer_Worst_Case_Timings is
          & " macs="
          & Trim (Natural'Image (Worst_Dense_Inputs * Worst_Dense_Neurons), Both));
 
+      --  MAC count: 9 taps per output pixel, per (cin,cout), times output grid (N-2)^2.
       Time_Conv2D
         (Worst_Conv_N,
          Worst_Conv_Cin,
