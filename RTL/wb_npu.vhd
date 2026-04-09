@@ -6,7 +6,7 @@ Library work;
 Use work.tensor_operations_base.All; --import word array sizes
 Use work.tensor_operations_pooling.All; --import pooling opcodes & helpers (read/max/avg)
 Use work.tensor_operations_activation.All;
-Use work.tensor_operations_dense.All;
+Use work.tensor_operations_conv_dense.All;
 --Revised address for tensors B, C, and R to allow addressing for the new 100x100 tensors (2500 words)
 Entity wb_npu Is
 	Generic (
