@@ -38,10 +38,9 @@ gtkwave tb_wb_npu.ghw
   - 80 filters with 50 3x3 kernels = 80 * 50 * 3 * 3 = 36,000, maxing out the weights tensor
 
 ### Results:
-- tb_wb_npu.vhd:187:25:@486392480ps:(report note): MAXPOOL latency (cycles) = 35004
-- tb_wb_npu.vhd:187:25:@972708576ps:(report note): AVGPOOL latency (cycles) = 35004
-- tb_wb_npu.vhd:187:25:@1111810784ps:(report note): RELU latency (cycles) = 10004
-- tb_wb_npu.vhd:187:25:@1250912992ps:(report note): SIGMOID latency (cycles) = 10004
-- tb_wb_npu.vhd:187:25:@2028918752ps:(report note): DENSE latency (cycles) = 56004
-- tb_wb_npu.vhd:187:25:@116338019168ps:(report note): CONV2D latency (cycles) = 8230765
-- tb_wb_npu.vhd:248:17:@116338119168ps:(report failure): Simulation finished
+- tb_wb_npu.vhd:187:25:@486392480ps:(report note): MaxPool latency (cycles) = 35004
+- tb_wb_npu.vhd:187:25:@972708576ps:(report note): AvgPool latency (cycles) = 35004
+- tb_wb_npu.vhd:187:25:@1111810784ps:(report note): ReLU latency (cycles) = 10004
+- tb_wb_npu.vhd:187:25:@1250912992ps:(report note): Sigmoid latency (cycles) = 10004
+- tb_wb_npu.vhd:187:25:@2028918752ps:(report note): Dense latency (cycles) = 56004
+- tb_wb_npu.vhd:187:25:@116338019168ps:(report note): Conv2D latency (cycles) = 8230765
